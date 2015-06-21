@@ -10,8 +10,8 @@ import UIKit
 
 class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
-    var placesData: [String] = ["Amsterdam", "Barcelona", "Berlin", "Dubay", "London", "Paris", "Rome", "Tuscany"]
-    var placeImages: [String] = ["amsterdam.jpg"]
+    var placesData: [String] = ["Amsterdam", "Barcelona", "Berlin", "Dubai", "London", "Paris", "Rome", "Tuscany"]
+    var placeImages: [String] = ["amsterdam.jpg", "barcelona.jpg", "berlin.jpg", "dubai.jpg", "london.jpg", "paris.jpg", "rome.jpg", "tuscany.jpg"]
     
     var places: [TPPlace] = [TPPlace]()
     
@@ -38,21 +38,37 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PlaceViewCell", forIndexPath: indexPath) as! PlaceCollectionViewCell
         // cell.backgroundColor = UIColor.redColor()
         cell.placeLabel.text = placesData[indexPath.row]
-        cell.placeImageView.image = UIImage(named: placeImages[0])
+        cell.placeImageView.image = UIImage(named: placeImages[indexPath.row])
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         println("Selected this Cell \(placesData[indexPath.row])")
         
-        TPClient.sharedInstance().getPlaces {places, error in
-            if let places = places {
-                self.places = places
-                println(places)
-            } else {
-                println(error)
-            }
-        }
+//        This was for some testing purpose
+//        TPClient.sharedInstance().getPlaces {places, error in
+//            if let places = places {
+//                self.places = places
+//                println(places)
+//            } else {
+//                println(error)
+//            }
+//        }
     }
 }
 
+// Configure layout
+extension PlaceViewController : UICollectionViewDelegateFlowLayout {
+    //1
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+            
+            return CGSize(width: 140, height: 240)
+    }
+    
+    //3
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+            let sectionInsets = UIEdgeInsets(top: 20.0, left: 10.0, bottom: 50.0, right: 10.0)
+            return sectionInsets
+    }
+}

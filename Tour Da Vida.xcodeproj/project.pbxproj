@@ -20,6 +20,16 @@
 		C004A8CA1B36C84B004BEC66 /* TPReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A8C91B36C84B004BEC66 /* TPReview.swift */; };
 		C004A8CE1B36D80B004BEC66 /* PlaceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A8CD1B36D80B004BEC66 /* PlaceCollectionViewCell.swift */; };
 		C004A8D01B36DE99004BEC66 /* amsterdam.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C004A8CF1B36DE99004BEC66 /* amsterdam.jpg */; };
+		C004A8D81B370033004BEC66 /* barcelona.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C004A8D11B370033004BEC66 /* barcelona.jpg */; };
+		C004A8D91B370033004BEC66 /* berlin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C004A8D21B370033004BEC66 /* berlin.jpg */; };
+		C004A8DA1B370033004BEC66 /* dubai.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C004A8D31B370033004BEC66 /* dubai.jpg */; };
+		C004A8DB1B370033004BEC66 /* london.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C004A8D41B370033004BEC66 /* london.jpg */; };
+		C004A8DC1B370033004BEC66 /* paris.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C004A8D51B370033004BEC66 /* paris.jpg */; };
+		C004A8DD1B370033004BEC66 /* rome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C004A8D61B370033004BEC66 /* rome.jpg */; };
+		C004A8DE1B370033004BEC66 /* tuscany.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C004A8D71B370033004BEC66 /* tuscany.jpg */; };
+		C004A8E01B37013B004BEC66 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A8DF1B37013B004BEC66 /* CategoryViewController.swift */; };
+		C004A8E21B370173004BEC66 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A8E11B370173004BEC66 /* ReviewViewController.swift */; };
+		C004A8E41B370188004BEC66 /* ReviewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A8E31B370188004BEC66 /* ReviewDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +60,16 @@
 		C004A8C91B36C84B004BEC66 /* TPReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPReview.swift; sourceTree = "<group>"; };
 		C004A8CD1B36D80B004BEC66 /* PlaceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceCollectionViewCell.swift; sourceTree = "<group>"; };
 		C004A8CF1B36DE99004BEC66 /* amsterdam.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = amsterdam.jpg; sourceTree = "<group>"; };
+		C004A8D11B370033004BEC66 /* barcelona.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = barcelona.jpg; sourceTree = "<group>"; };
+		C004A8D21B370033004BEC66 /* berlin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = berlin.jpg; sourceTree = "<group>"; };
+		C004A8D31B370033004BEC66 /* dubai.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dubai.jpg; sourceTree = "<group>"; };
+		C004A8D41B370033004BEC66 /* london.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = london.jpg; sourceTree = "<group>"; };
+		C004A8D51B370033004BEC66 /* paris.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paris.jpg; sourceTree = "<group>"; };
+		C004A8D61B370033004BEC66 /* rome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rome.jpg; sourceTree = "<group>"; };
+		C004A8D71B370033004BEC66 /* tuscany.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tuscany.jpg; sourceTree = "<group>"; };
+		C004A8DF1B37013B004BEC66 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		C004A8E11B370173004BEC66 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		C004A8E31B370188004BEC66 /* ReviewDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +125,13 @@
 		C004A8981B368F52004BEC66 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C004A8D11B370033004BEC66 /* barcelona.jpg */,
+				C004A8D21B370033004BEC66 /* berlin.jpg */,
+				C004A8D31B370033004BEC66 /* dubai.jpg */,
+				C004A8D41B370033004BEC66 /* london.jpg */,
+				C004A8D51B370033004BEC66 /* paris.jpg */,
+				C004A8D61B370033004BEC66 /* rome.jpg */,
+				C004A8D71B370033004BEC66 /* tuscany.jpg */,
 				C004A8CF1B36DE99004BEC66 /* amsterdam.jpg */,
 				C004A8991B368F52004BEC66 /* Info.plist */,
 			);
@@ -148,6 +175,9 @@
 			isa = PBXGroup;
 			children = (
 				C004A89C1B368F52004BEC66 /* PlaceViewController.swift */,
+				C004A8DF1B37013B004BEC66 /* CategoryViewController.swift */,
+				C004A8E11B370173004BEC66 /* ReviewViewController.swift */,
+				C004A8E31B370188004BEC66 /* ReviewDetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -254,8 +284,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C004A8A01B368F52004BEC66 /* Main.storyboard in Resources */,
+				C004A8DE1B370033004BEC66 /* tuscany.jpg in Resources */,
+				C004A8D91B370033004BEC66 /* berlin.jpg in Resources */,
+				C004A8D81B370033004BEC66 /* barcelona.jpg in Resources */,
+				C004A8DB1B370033004BEC66 /* london.jpg in Resources */,
 				C004A8A51B368F52004BEC66 /* LaunchScreen.xib in Resources */,
+				C004A8DC1B370033004BEC66 /* paris.jpg in Resources */,
+				C004A8DD1B370033004BEC66 /* rome.jpg in Resources */,
 				C004A8D01B36DE99004BEC66 /* amsterdam.jpg in Resources */,
+				C004A8DA1B370033004BEC66 /* dubai.jpg in Resources */,
 				C004A8A21B368F52004BEC66 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,11 +313,14 @@
 			files = (
 				C004A8C41B36BD4B004BEC66 /* TPClient.swift in Sources */,
 				C004A8C21B36BD3D004BEC66 /* TPConstants.swift in Sources */,
+				C004A8E21B370173004BEC66 /* ReviewViewController.swift in Sources */,
+				C004A8E41B370188004BEC66 /* ReviewDetailViewController.swift in Sources */,
 				C004A8CA1B36C84B004BEC66 /* TPReview.swift in Sources */,
 				C004A8C61B36C6C2004BEC66 /* TPConvenience.swift in Sources */,
 				C004A8CE1B36D80B004BEC66 /* PlaceCollectionViewCell.swift in Sources */,
 				C004A8C81B36C834004BEC66 /* TPPlace.swift in Sources */,
 				C004A89D1B368F52004BEC66 /* PlaceViewController.swift in Sources */,
+				C004A8E01B37013B004BEC66 /* CategoryViewController.swift in Sources */,
 				C004A89B1B368F52004BEC66 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

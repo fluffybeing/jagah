@@ -12,5 +12,4 @@ class PlaceCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var placeImageView: UIImageView!
     @IBOutlet weak var placeLabel: UILabel!
-
 }
