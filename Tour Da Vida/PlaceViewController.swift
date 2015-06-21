@@ -22,6 +22,10 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
         // Do any additional setup after loading the view, typically from a nib.
         collectionView!.dataSource = self
         collectionView!.delegate = self
+        
+        // Navigation controller title update
+        self.navigationController?.navigationBar.topItem?.title = "Home"
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,6 +48,11 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         println("Selected this Cell \(placesData[indexPath.row])")
+        // Get a reviewController from the Storyboard
+        let categoryController = self.storyboard!.instantiateViewControllerWithIdentifier("CategoryViewController") as! CategoryViewController
+        
+        // Push the new controller onto the stack
+        self.navigationController!.pushViewController(categoryController, animated: true)
         
 //        This was for some testing purpose
 //        TPClient.sharedInstance().getPlaces {places, error in
@@ -68,7 +77,7 @@ extension PlaceViewController : UICollectionViewDelegateFlowLayout {
     
     //3
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-            let sectionInsets = UIEdgeInsets(top: 20.0, left: 10.0, bottom: 50.0, right: 10.0)
+            let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 50.0, right: 10.0)
             return sectionInsets
     }
 }
