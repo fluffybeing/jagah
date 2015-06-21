@@ -32,10 +32,13 @@ extension TPClient {
     // MARK: - Parameter Keys
     struct ParameterKeys {
         
+        // for places
         static let location = "location"
         static let category = "category"
         static let name = "name"
         static let source = "source"
+        
+        // for reviews
         static let language = "language"
         static let keyword = "keywords"
         static let minWords = "minWords"

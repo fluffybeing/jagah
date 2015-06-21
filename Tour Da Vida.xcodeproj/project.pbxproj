@@ -8,13 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		C004A89B1B368F52004BEC66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A89A1B368F52004BEC66 /* AppDelegate.swift */; };
-		C004A89D1B368F52004BEC66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A89C1B368F52004BEC66 /* ViewController.swift */; };
+		C004A89D1B368F52004BEC66 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A89C1B368F52004BEC66 /* PlaceViewController.swift */; };
 		C004A8A01B368F52004BEC66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C004A89E1B368F52004BEC66 /* Main.storyboard */; };
 		C004A8A21B368F52004BEC66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C004A8A11B368F52004BEC66 /* Images.xcassets */; };
 		C004A8A51B368F52004BEC66 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C004A8A31B368F52004BEC66 /* LaunchScreen.xib */; };
 		C004A8B11B368F52004BEC66 /* Tour_Da_VidaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A8B01B368F52004BEC66 /* Tour_Da_VidaTests.swift */; };
 		C004A8C21B36BD3D004BEC66 /* TPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A8C11B36BD3D004BEC66 /* TPConstants.swift */; };
 		C004A8C41B36BD4B004BEC66 /* TPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A8C31B36BD4B004BEC66 /* TPClient.swift */; };
+		C004A8C61B36C6C2004BEC66 /* TPConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A8C51B36C6C2004BEC66 /* TPConvenience.swift */; };
+		C004A8C81B36C834004BEC66 /* TPPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A8C71B36C834004BEC66 /* TPPlace.swift */; };
+		C004A8CA1B36C84B004BEC66 /* TPReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A8C91B36C84B004BEC66 /* TPReview.swift */; };
+		C004A8CE1B36D80B004BEC66 /* PlaceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A8CD1B36D80B004BEC66 /* PlaceCollectionViewCell.swift */; };
+		C004A8D01B36DE99004BEC66 /* amsterdam.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C004A8CF1B36DE99004BEC66 /* amsterdam.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +36,7 @@
 		C004A8951B368F52004BEC66 /* Tour Da Vida.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tour Da Vida.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C004A8991B368F52004BEC66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C004A89A1B368F52004BEC66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C004A89C1B368F52004BEC66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C004A89C1B368F52004BEC66 /* PlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
 		C004A89F1B368F52004BEC66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C004A8A11B368F52004BEC66 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C004A8A41B368F52004BEC66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -40,6 +45,11 @@
 		C004A8B01B368F52004BEC66 /* Tour_Da_VidaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tour_Da_VidaTests.swift; sourceTree = "<group>"; };
 		C004A8C11B36BD3D004BEC66 /* TPConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPConstants.swift; sourceTree = "<group>"; };
 		C004A8C31B36BD4B004BEC66 /* TPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPClient.swift; sourceTree = "<group>"; };
+		C004A8C51B36C6C2004BEC66 /* TPConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPConvenience.swift; sourceTree = "<group>"; };
+		C004A8C71B36C834004BEC66 /* TPPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPPlace.swift; sourceTree = "<group>"; };
+		C004A8C91B36C84B004BEC66 /* TPReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPReview.swift; sourceTree = "<group>"; };
+		C004A8CD1B36D80B004BEC66 /* PlaceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceCollectionViewCell.swift; sourceTree = "<group>"; };
+		C004A8CF1B36DE99004BEC66 /* amsterdam.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = amsterdam.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +105,7 @@
 		C004A8981B368F52004BEC66 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C004A8CF1B36DE99004BEC66 /* amsterdam.jpg */,
 				C004A8991B368F52004BEC66 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -128,6 +139,7 @@
 		C004A8BB1B36BA38004BEC66 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C004A8CD1B36D80B004BEC66 /* PlaceCollectionViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -135,7 +147,7 @@
 		C004A8BC1B36BA4C004BEC66 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C004A89C1B368F52004BEC66 /* ViewController.swift */,
+				C004A89C1B368F52004BEC66 /* PlaceViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -154,6 +166,9 @@
 			children = (
 				C004A8C11B36BD3D004BEC66 /* TPConstants.swift */,
 				C004A8C31B36BD4B004BEC66 /* TPClient.swift */,
+				C004A8C51B36C6C2004BEC66 /* TPConvenience.swift */,
+				C004A8C71B36C834004BEC66 /* TPPlace.swift */,
+				C004A8C91B36C84B004BEC66 /* TPReview.swift */,
 			);
 			name = TourPedia;
 			sourceTree = "<group>";
@@ -240,6 +255,7 @@
 			files = (
 				C004A8A01B368F52004BEC66 /* Main.storyboard in Resources */,
 				C004A8A51B368F52004BEC66 /* LaunchScreen.xib in Resources */,
+				C004A8D01B36DE99004BEC66 /* amsterdam.jpg in Resources */,
 				C004A8A21B368F52004BEC66 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,7 +276,11 @@
 			files = (
 				C004A8C41B36BD4B004BEC66 /* TPClient.swift in Sources */,
 				C004A8C21B36BD3D004BEC66 /* TPConstants.swift in Sources */,
-				C004A89D1B368F52004BEC66 /* ViewController.swift in Sources */,
+				C004A8CA1B36C84B004BEC66 /* TPReview.swift in Sources */,
+				C004A8C61B36C6C2004BEC66 /* TPConvenience.swift in Sources */,
+				C004A8CE1B36D80B004BEC66 /* PlaceCollectionViewCell.swift in Sources */,
+				C004A8C81B36C834004BEC66 /* TPPlace.swift in Sources */,
+				C004A89D1B368F52004BEC66 /* PlaceViewController.swift in Sources */,
 				C004A89B1B368F52004BEC66 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
