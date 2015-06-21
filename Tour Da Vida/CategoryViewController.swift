@@ -17,10 +17,6 @@ class CategoryViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Navigation controller title update
-        self.navigationController?.navigationBar.topItem?.title = "Categories"
-        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -28,6 +24,11 @@ class CategoryViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationItem.title = "Categories"
+    }
     // MARK: - UITableViewController
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,18 +59,4 @@ class CategoryViewController: UITableViewController {
         self.navigationController!.pushViewController(reviewController, animated: true)
     }
     
-    // Helpers
-    
-    func imageWithBorderForImage(initalImage: UIImage) -> UIImage {
-        var borderSize:CGFloat = 5.0
-        
-        UIGraphicsBeginImageContext(CGSizeMake(initalImage.size.width + borderSize * 2.0, initalImage.size.height + borderSize * 2.0))
-        
-        initalImage.drawInRect(CGRectMake(borderSize, borderSize, initalImage.size.width, initalImage.size.height))
-        let resultedImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        return resultedImage
-    }
-
 }

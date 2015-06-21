@@ -13,6 +13,7 @@ struct TPPlace {
     var name = ""
     var id = 0
     var address = ""
+    var details = ""
     
     /* Construct a TPPlace from a dictionary */
     init(dictionary: [String : AnyObject]) {
@@ -20,6 +21,7 @@ struct TPPlace {
         name = dictionary[TPClient.JSONResponseKeys.PlaceName] as! String
         id = dictionary[TPClient.JSONResponseKeys.PlaceId] as! Int
         address = dictionary[TPClient.JSONResponseKeys.PlaceAddress] as! String
+        details = dictionary[TPClient.JSONResponseKeys.PlaceDetails] as! String
     
     }
     

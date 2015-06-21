@@ -37,6 +37,7 @@
 		C004A9561B371566004BEC66 /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A9551B371566004BEC66 /* CategoryViewCell.swift */; };
 		C004A9581B3716B4004BEC66 /* SupportedPlacesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A9571B3716B4004BEC66 /* SupportedPlacesData.swift */; };
 		C004A95A1B371AC8004BEC66 /* CategoryEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A9591B371AC8004BEC66 /* CategoryEntries.swift */; };
+		C004A95C1B374445004BEC66 /* ReviewViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A95B1B374445004BEC66 /* ReviewViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		C004A9551B371566004BEC66 /* CategoryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
 		C004A9571B3716B4004BEC66 /* SupportedPlacesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportedPlacesData.swift; sourceTree = "<group>"; };
 		C004A9591B371AC8004BEC66 /* CategoryEntries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryEntries.swift; sourceTree = "<group>"; };
+		C004A95B1B374445004BEC66 /* ReviewViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 		C004A8BB1B36BA38004BEC66 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C004A95B1B374445004BEC66 /* ReviewViewCell.swift */,
 				C004A8CD1B36D80B004BEC66 /* PlaceCollectionViewCell.swift */,
 				C004A9551B371566004BEC66 /* CategoryViewCell.swift */,
 			);
@@ -353,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C004A95A1B371AC8004BEC66 /* CategoryEntries.swift in Sources */,
+				C004A95C1B374445004BEC66 /* ReviewViewCell.swift in Sources */,
 				C004A8C41B36BD4B004BEC66 /* TPClient.swift in Sources */,
 				C004A8C21B36BD3D004BEC66 /* TPConstants.swift in Sources */,
 				C004A8E21B370173004BEC66 /* ReviewViewController.swift in Sources */,

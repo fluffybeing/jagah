@@ -124,7 +124,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f8T-Md-n1s" id="CU7-4i-wFf">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tBU-C9-uFe">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tBU-C9-uFe">
                                             <rect key="frame" x="8" y="4" width="70" height="70"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="70" id="cWZ-gv-QCR"/>
@@ -132,7 +132,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPj-Ta-prf">
-                                            <rect key="frame" x="127" y="28" width="170" height="21"/>
+                                            <rect key="frame" x="86" y="28" width="170" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="4Ns-yl-gTN"/>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="58A-hn-K7N"/>
@@ -144,8 +144,10 @@
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="tBU-C9-uFe" firstAttribute="top" secondItem="CU7-4i-wFf" secondAttribute="topMargin" constant="-4" id="28L-Xs-4WE"/>
                                         <constraint firstItem="DPj-Ta-prf" firstAttribute="top" secondItem="CU7-4i-wFf" secondAttribute="top" constant="28" id="4yx-4v-mE0"/>
-                                        <constraint firstItem="DPj-Ta-prf" firstAttribute="leading" secondItem="CU7-4i-wFf" secondAttribute="leadingMargin" constant="119" id="zoH-Lx-lUV"/>
+                                        <constraint firstItem="DPj-Ta-prf" firstAttribute="leading" secondItem="tBU-C9-uFe" secondAttribute="trailing" constant="8" symbolic="YES" id="I9M-5O-OTy"/>
+                                        <constraint firstItem="DPj-Ta-prf" firstAttribute="leading" secondItem="CU7-4i-wFf" secondAttribute="leadingMargin" constant="78" id="zoH-Lx-lUV"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
@@ -169,30 +171,52 @@
         <scene sceneID="Yff-d6-yfQ">
             <objects>
                 <tableViewController storyboardIdentifier="ReviewViewController" id="01v-cm-56U" customClass="ReviewViewController" customModule="Tour_Da_Vida" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="cBE-Ap-yv9">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="74" sectionHeaderHeight="22" sectionFooterHeight="22" id="cBE-Ap-yv9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="XWr-Sw-aWQ">
+                            <rect key="frame" x="0.0" y="96" width="600" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReviewViewCell" textLabel="3on-ch-9Qv" detailTextLabel="20Y-Rg-xS7" style="IBUITableViewCellStyleSubtitle" id="4aC-8y-4Uh">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReviewViewCell" rowHeight="74" id="4aC-8y-4Uh" customClass="ReviewViewCell" customModule="Tour_Da_Vida" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4aC-8y-4Uh" id="jP6-Q6-FrB">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3on-ch-9Qv">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUA-Vi-UUl">
+                                            <rect key="frame" x="16" y="20" width="81" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="81" id="i8E-oi-qDR"/>
+                                                <constraint firstAttribute="height" constant="21" id="jvl-lQ-wHI"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="20Y-Rg-xS7">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdv-Wc-9pU">
+                                            <rect key="frame" x="151" y="20" width="89" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="RLB-h1-rnj"/>
+                                                <constraint firstAttribute="width" constant="89" id="irp-kU-dJw"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="qdv-Wc-9pU" firstAttribute="top" secondItem="jP6-Q6-FrB" secondAttribute="topMargin" constant="12" id="CaZ-vf-N8P"/>
+                                        <constraint firstItem="GUA-Vi-UUl" firstAttribute="top" secondItem="jP6-Q6-FrB" secondAttribute="topMargin" constant="12" id="P8g-7W-48w"/>
+                                        <constraint firstItem="qdv-Wc-9pU" firstAttribute="leading" secondItem="GUA-Vi-UUl" secondAttribute="trailing" constant="54" id="e2l-Oh-LgE"/>
+                                        <constraint firstItem="GUA-Vi-UUl" firstAttribute="leading" secondItem="jP6-Q6-FrB" secondAttribute="leadingMargin" constant="8" id="ftG-VS-F89"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="placeName" destination="GUA-Vi-UUl" id="ypI-il-emb"/>
+                                    <outlet property="reviewText" destination="qdv-Wc-9pU" id="qmL-pp-tU8"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -200,6 +224,9 @@
                             <outlet property="delegate" destination="01v-cm-56U" id="dgA-32-8ae"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="activityIndicator" destination="XWr-Sw-aWQ" id="je0-9y-wcv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IkS-NM-J2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

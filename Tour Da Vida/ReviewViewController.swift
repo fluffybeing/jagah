@@ -11,29 +11,62 @@ import UIKit
 
 class ReviewViewController: UITableViewController {
     
-    var reviews = ["one", "two", "three", "four", "Five", "Six"]
+    var reviews: [TPReview] = [TPReview]()
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        TPClient.sharedInstance().getReviews {reviews, error in
+            if let reviews = reviews {
+                self.reviews = reviews
+                
+                // deactivate the indicator after data loading is complete
+                self.activityIndicator.alpha = 0.0
+                self.activityIndicator.stopAnimating()
+                
+                // reload table cell in main thread
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.tableView.reloadData()
+                }
+
+            } else {
+                println(error)
+            }
+        }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.activityIndicator.alpha = 1.0
+        self.activityIndicator.startAnimating()
+        
+        self.navigationItem.title = "Reviews"
+        
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        self.tableView.reloadData()
+        
     }
     
     // MARK: - UITableViewController
-    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return reviews.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell = self.tableView.dequeueReusableCellWithIdentifier("ReviewViewCell") as! UITableViewCell
+        var cell = self.tableView.dequeueReusableCellWithIdentifier("ReviewViewCell") as! ReviewViewCell
+        
+        var review = reviews[indexPath.row]
+        cell.placeName.text = review.source
+        cell.reviewText.text = review.text
+        
         return cell
     }
     

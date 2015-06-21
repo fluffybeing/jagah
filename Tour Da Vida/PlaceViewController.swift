@@ -21,7 +21,7 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
         collectionView!.delegate = self
         
         // Navigation controller title update
-        self.navigationController?.navigationBar.topItem?.title = "Home"
+        self.navigationItem.title = "Home"
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,17 +53,6 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         // Push the new controller onto the stack
         self.navigationController!.pushViewController(categoryController, animated: true)
-        
-//        This was for some testing purpose
-//        var places: [TPPlace] = [TPPlace]()
-//        TPClient.sharedInstance().getPlaces {places, error in
-//            if let places = places {
-//                self.places = places
-//                println(places)
-//            } else {
-//                println(error)
-//            }
-//        }
     }
 }
 
