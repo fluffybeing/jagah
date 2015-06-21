@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C004A89B1B368F52004BEC66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A89A1B368F52004BEC66 /* AppDelegate.swift */; };
+		C004A89D1B368F52004BEC66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A89C1B368F52004BEC66 /* ViewController.swift */; };
+		C004A8A01B368F52004BEC66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C004A89E1B368F52004BEC66 /* Main.storyboard */; };
+		C004A8A21B368F52004BEC66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C004A8A11B368F52004BEC66 /* Images.xcassets */; };
+		C004A8A51B368F52004BEC66 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C004A8A31B368F52004BEC66 /* LaunchScreen.xib */; };
+		C004A8B11B368F52004BEC66 /* Tour_Da_VidaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A8B01B368F52004BEC66 /* Tour_Da_VidaTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C004A8AB1B368F52004BEC66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C004A88D1B368F52004BEC66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C004A8941B368F52004BEC66;
+			remoteInfo = "Tour Da Vida";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C004A8951B368F52004BEC66 /* Tour Da Vida.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tour Da Vida.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C004A8991B368F52004BEC66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C004A89A1B368F52004BEC66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C004A89C1B368F52004BEC66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C004A89F1B368F52004BEC66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C004A8A11B368F52004BEC66 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C004A8A41B368F52004BEC66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C004A8AA1B368F52004BEC66 /* Tour Da VidaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tour Da VidaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C004A8AF1B368F52004BEC66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C004A8B01B368F52004BEC66 /* Tour_Da_VidaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tour_Da_VidaTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C004A8921B368F52004BEC66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C004A8A71B368F52004BEC66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C004A88C1B368F52004BEC66 = {
+			isa = PBXGroup;
+			children = (
+				C004A8971B368F52004BEC66 /* Tour Da Vida */,
+				C004A8AD1B368F52004BEC66 /* Tour Da VidaTests */,
+				C004A8961B368F52004BEC66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C004A8961B368F52004BEC66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C004A8951B368F52004BEC66 /* Tour Da Vida.app */,
+				C004A8AA1B368F52004BEC66 /* Tour Da VidaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C004A8971B368F52004BEC66 /* Tour Da Vida */ = {
+			isa = PBXGroup;
+			children = (
+				C004A89A1B368F52004BEC66 /* AppDelegate.swift */,
+				C004A89C1B368F52004BEC66 /* ViewController.swift */,
+				C004A89E1B368F52004BEC66 /* Main.storyboard */,
+				C004A8A11B368F52004BEC66 /* Images.xcassets */,
+				C004A8A31B368F52004BEC66 /* LaunchScreen.xib */,
+				C004A8981B368F52004BEC66 /* Supporting Files */,
+			);
+			path = "Tour Da Vida";
+			sourceTree = "<group>";
+		};
+		C004A8981B368F52004BEC66 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C004A8991B368F52004BEC66 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C004A8AD1B368F52004BEC66 /* Tour Da VidaTests */ = {
+			isa = PBXGroup;
+			children = (
+				C004A8B01B368F52004BEC66 /* Tour_Da_VidaTests.swift */,
+				C004A8AE1B368F52004BEC66 /* Supporting Files */,
+			);
+			path = "Tour Da VidaTests";
+			sourceTree = "<group>";
+		};
+		C004A8AE1B368F52004BEC66 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C004A8AF1B368F52004BEC66 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C004A8941B368F52004BEC66 /* Tour Da Vida */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C004A8B41B368F52004BEC66 /* Build configuration list for PBXNativeTarget "Tour Da Vida" */;
+			buildPhases = (
+				C004A8911B368F52004BEC66 /* Sources */,
+				C004A8921B368F52004BEC66 /* Frameworks */,
+				C004A8931B368F52004BEC66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tour Da Vida";
+			productName = "Tour Da Vida";
+			productReference = C004A8951B368F52004BEC66 /* Tour Da Vida.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C004A8A91B368F52004BEC66 /* Tour Da VidaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C004A8B71B368F52004BEC66 /* Build configuration list for PBXNativeTarget "Tour Da VidaTests" */;
+			buildPhases = (
+				C004A8A61B368F52004BEC66 /* Sources */,
+				C004A8A71B368F52004BEC66 /* Frameworks */,
+				C004A8A81B368F52004BEC66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C004A8AC1B368F52004BEC66 /* PBXTargetDependency */,
+			);
+			name = "Tour Da VidaTests";
+			productName = "Tour Da VidaTests";
+			productReference = C004A8AA1B368F52004BEC66 /* Tour Da VidaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C004A88D1B368F52004BEC66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = Housing;
+				TargetAttributes = {
+					C004A8941B368F52004BEC66 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					C004A8A91B368F52004BEC66 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = C004A8941B368F52004BEC66;
+					};
+				};
+			};
+			buildConfigurationList = C004A8901B368F52004BEC66 /* Build configuration list for PBXProject "Tour Da Vida" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C004A88C1B368F52004BEC66;
+			productRefGroup = C004A8961B368F52004BEC66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C004A8941B368F52004BEC66 /* Tour Da Vida */,
+				C004A8A91B368F52004BEC66 /* Tour Da VidaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C004A8931B368F52004BEC66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C004A8A01B368F52004BEC66 /* Main.storyboard in Resources */,
+				C004A8A51B368F52004BEC66 /* LaunchScreen.xib in Resources */,
+				C004A8A21B368F52004BEC66 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C004A8A81B368F52004BEC66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C004A8911B368F52004BEC66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C004A89D1B368F52004BEC66 /* ViewController.swift in Sources */,
+				C004A89B1B368F52004BEC66 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C004A8A61B368F52004BEC66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C004A8B11B368F52004BEC66 /* Tour_Da_VidaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C004A8AC1B368F52004BEC66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C004A8941B368F52004BEC66 /* Tour Da Vida */;
+			targetProxy = C004A8AB1B368F52004BEC66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C004A89E1B368F52004BEC66 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C004A89F1B368F52004BEC66 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C004A8A31B368F52004BEC66 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C004A8A41B368F52004BEC66 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C004A8B21B368F52004BEC66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C004A8B31B368F52004BEC66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C004A8B51B368F52004BEC66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Tour Da Vida/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C004A8B61B368F52004BEC66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Tour Da Vida/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C004A8B81B368F52004BEC66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tour Da VidaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tour Da Vida.app/Tour Da Vida";
+			};
+			name = Debug;
+		};
+		C004A8B91B368F52004BEC66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tour Da VidaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tour Da Vida.app/Tour Da Vida";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C004A8901B368F52004BEC66 /* Build configuration list for PBXProject "Tour Da Vida" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C004A8B21B368F52004BEC66 /* Debug */,
+				C004A8B31B368F52004BEC66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C004A8B41B368F52004BEC66 /* Build configuration list for PBXNativeTarget "Tour Da Vida" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C004A8B51B368F52004BEC66 /* Debug */,
+				C004A8B61B368F52004BEC66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C004A8B71B368F52004BEC66 /* Build configuration list for PBXNativeTarget "Tour Da VidaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C004A8B81B368F52004BEC66 /* Debug */,
+				C004A8B91B368F52004BEC66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C004A88D1B368F52004BEC66 /* Project object */;
+}
