@@ -13,4 +13,9 @@ class CategoryViewCell: UITableViewCell {
     @IBOutlet weak var categoryIcon: UIImageView!
     @IBOutlet weak var categoryName: UILabel!
 
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
 }
+

@@ -20,13 +20,9 @@ class CategoryData {
     }
     
     let entry = [
-        Enrty(imageFilename: "amsterdam.jpg", categoryName: "Amsterdam"),
-        Enrty(imageFilename: "barcelona.jpg", categoryName: "Barcelona"),
-        Enrty(imageFilename: "berlin.jpg", categoryName: "Berlin"),
-        Enrty(imageFilename: "dubai.jpg", categoryName: "Dubai"),
-        Enrty(imageFilename: "london.jpg", categoryName: "London"),
-        Enrty(imageFilename: "paris.jpg", categoryName: "Paris"),
-        Enrty(imageFilename: "rome.jpg", categoryName: "Rome"),
-        Enrty(imageFilename: "tuscany.jpg", categoryName: "Tuscany"),
+        Enrty(imageFilename: "sunbathing.png", categoryName: "Accomodation"),
+        Enrty(imageFilename: "heart206.png", categoryName: "Point Of Interest"),
+        Enrty(imageFilename: "coconut5.png", categoryName: "Restaurant"),
+        Enrty(imageFilename: "castle7.png", categoryName: "Attraction")
     ]
 }

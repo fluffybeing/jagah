@@ -41,6 +41,8 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
         let entry = placeData.entryPlaces[indexPath.row]
         cell.placeLabel.text = entry.locationName
         cell.placeImageView.image = UIImage(named: entry.imageFilename)
+        
+        
         return cell
     }
     

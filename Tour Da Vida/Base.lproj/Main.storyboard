@@ -114,40 +114,41 @@
         <scene sceneID="q6w-07-9fR">
             <objects>
                 <tableViewController storyboardIdentifier="CategoryViewController" id="RuW-Ri-crs" customClass="CategoryViewController" customModule="Tour_Da_Vida" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="lf5-kn-TNe">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="79" sectionHeaderHeight="22" sectionFooterHeight="22" id="lf5-kn-TNe">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryViewCell" rowHeight="100" id="f8T-Md-n1s" customClass="CategoryViewCell" customModule="Tour_Da_Vida" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryViewCell" rowHeight="79" id="f8T-Md-n1s" customClass="CategoryViewCell" customModule="Tour_Da_Vida" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f8T-Md-n1s" id="CU7-4i-wFf">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tBU-C9-uFe">
-                                            <rect key="frame" x="8" y="4" width="100" height="91"/>
+                                            <rect key="frame" x="8" y="4" width="70" height="70"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="91" id="cWZ-gv-QCR"/>
-                                                <constraint firstAttribute="width" constant="100" id="q3f-sj-qxk"/>
+                                                <constraint firstAttribute="height" constant="70" id="cWZ-gv-QCR"/>
+                                                <constraint firstAttribute="width" constant="70" id="q3f-sj-qxk"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPj-Ta-prf">
-                                            <rect key="frame" x="146" y="39" width="170" height="21"/>
+                                            <rect key="frame" x="127" y="28" width="170" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="4Ns-yl-gTN"/>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="58A-hn-K7N"/>
                                                 <constraint firstAttribute="width" constant="170" id="9eM-6k-bca"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="DPj-Ta-prf" firstAttribute="top" secondItem="CU7-4i-wFf" secondAttribute="top" constant="39" id="4yx-4v-mE0"/>
-                                        <constraint firstItem="DPj-Ta-prf" firstAttribute="leading" secondItem="CU7-4i-wFf" secondAttribute="leadingMargin" constant="138" id="zoH-Lx-lUV"/>
+                                        <constraint firstItem="DPj-Ta-prf" firstAttribute="top" secondItem="CU7-4i-wFf" secondAttribute="top" constant="28" id="4yx-4v-mE0"/>
+                                        <constraint firstItem="DPj-Ta-prf" firstAttribute="leading" secondItem="CU7-4i-wFf" secondAttribute="leadingMargin" constant="119" id="zoH-Lx-lUV"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="categoryIcon" destination="tBU-C9-uFe" id="7LT-dJ-0Xt"/>
                                     <outlet property="categoryName" destination="DPj-Ta-prf" id="CW6-P1-g2Z"/>

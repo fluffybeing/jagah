@@ -57,4 +57,19 @@ class CategoryViewController: UITableViewController {
         // Push the new controller onto the stack
         self.navigationController!.pushViewController(reviewController, animated: true)
     }
+    
+    // Helpers
+    
+    func imageWithBorderForImage(initalImage: UIImage) -> UIImage {
+        var borderSize:CGFloat = 5.0
+        
+        UIGraphicsBeginImageContext(CGSizeMake(initalImage.size.width + borderSize * 2.0, initalImage.size.height + borderSize * 2.0))
+        
+        initalImage.drawInRect(CGRectMake(borderSize, borderSize, initalImage.size.width, initalImage.size.height))
+        let resultedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return resultedImage
+    }
+
 }
