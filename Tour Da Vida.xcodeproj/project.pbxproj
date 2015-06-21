@@ -13,6 +13,8 @@
 		C004A8A21B368F52004BEC66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C004A8A11B368F52004BEC66 /* Images.xcassets */; };
 		C004A8A51B368F52004BEC66 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C004A8A31B368F52004BEC66 /* LaunchScreen.xib */; };
 		C004A8B11B368F52004BEC66 /* Tour_Da_VidaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A8B01B368F52004BEC66 /* Tour_Da_VidaTests.swift */; };
+		C004A8C21B36BD3D004BEC66 /* TPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A8C11B36BD3D004BEC66 /* TPConstants.swift */; };
+		C004A8C41B36BD4B004BEC66 /* TPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A8C31B36BD4B004BEC66 /* TPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		C004A8AA1B368F52004BEC66 /* Tour Da VidaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tour Da VidaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C004A8AF1B368F52004BEC66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C004A8B01B368F52004BEC66 /* Tour_Da_VidaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tour_Da_VidaTests.swift; sourceTree = "<group>"; };
+		C004A8C11B36BD3D004BEC66 /* TPConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPConstants.swift; sourceTree = "<group>"; };
+		C004A8C31B36BD4B004BEC66 /* TPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +81,12 @@
 		C004A8971B368F52004BEC66 /* Tour Da Vida */ = {
 			isa = PBXGroup;
 			children = (
+				C004A8BC1B36BA4C004BEC66 /* Controller */,
+				C004A8BB1B36BA38004BEC66 /* View */,
+				C004A8BA1B36BA27004BEC66 /* Model */,
 				C004A89A1B368F52004BEC66 /* AppDelegate.swift */,
-				C004A89C1B368F52004BEC66 /* ViewController.swift */,
-				C004A89E1B368F52004BEC66 /* Main.storyboard */,
+				C004A8BD1B36BA86004BEC66 /* Storyboard */,
 				C004A8A11B368F52004BEC66 /* Images.xcassets */,
-				C004A8A31B368F52004BEC66 /* LaunchScreen.xib */,
 				C004A8981B368F52004BEC66 /* Supporting Files */,
 			);
 			path = "Tour Da Vida";
@@ -110,6 +115,47 @@
 				C004A8AF1B368F52004BEC66 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C004A8BA1B36BA27004BEC66 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C004A8BE1B36BBAB004BEC66 /* TourPedia */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C004A8BB1B36BA38004BEC66 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C004A8BC1B36BA4C004BEC66 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C004A89C1B368F52004BEC66 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C004A8BD1B36BA86004BEC66 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C004A8A31B368F52004BEC66 /* LaunchScreen.xib */,
+				C004A89E1B368F52004BEC66 /* Main.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		C004A8BE1B36BBAB004BEC66 /* TourPedia */ = {
+			isa = PBXGroup;
+			children = (
+				C004A8C11B36BD3D004BEC66 /* TPConstants.swift */,
+				C004A8C31B36BD4B004BEC66 /* TPClient.swift */,
+			);
+			name = TourPedia;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +258,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C004A8C41B36BD4B004BEC66 /* TPClient.swift in Sources */,
+				C004A8C21B36BD3D004BEC66 /* TPConstants.swift in Sources */,
 				C004A89D1B368F52004BEC66 /* ViewController.swift in Sources */,
 				C004A89B1B368F52004BEC66 /* AppDelegate.swift in Sources */,
 			);
