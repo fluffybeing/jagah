@@ -10,10 +10,7 @@ import UIKit
 
 class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
-    var placesData: [String] = ["Amsterdam", "Barcelona", "Berlin", "Dubai", "London", "Paris", "Rome", "Tuscany"]
-    var placeImages: [String] = ["amsterdam.jpg", "barcelona.jpg", "berlin.jpg", "dubai.jpg", "london.jpg", "paris.jpg", "rome.jpg", "tuscany.jpg"]
-    
-    var places: [TPPlace] = [TPPlace]()
+    var placeData = PlaceData()
     
     @IBOutlet var collectionView: UICollectionView?
     
@@ -25,7 +22,6 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         // Navigation controller title update
         self.navigationController?.navigationBar.topItem?.title = "Home"
-    
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,19 +31,21 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     // UICollectionView Delegates
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return placesData.count
+        return placeData.entryPlaces.count
     }
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PlaceViewCell", forIndexPath: indexPath) as! PlaceCollectionViewCell
         // cell.backgroundColor = UIColor.redColor()
-        cell.placeLabel.text = placesData[indexPath.row]
-        cell.placeImageView.image = UIImage(named: placeImages[indexPath.row])
+        
+        let entry = placeData.entryPlaces[indexPath.row]
+        cell.placeLabel.text = entry.locationName
+        cell.placeImageView.image = UIImage(named: entry.imageFilename)
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        println("Selected this Cell \(placesData[indexPath.row])")
+        println("Selected this Cell \(placeData.entryPlaces[indexPath.row])")
         // Get a reviewController from the Storyboard
         let categoryController = self.storyboard!.instantiateViewControllerWithIdentifier("CategoryViewController") as! CategoryViewController
         
@@ -55,6 +53,7 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
         self.navigationController!.pushViewController(categoryController, animated: true)
         
 //        This was for some testing purpose
+//        var places: [TPPlace] = [TPPlace]()
 //        TPClient.sharedInstance().getPlaces {places, error in
 //            if let places = places {
 //                self.places = places

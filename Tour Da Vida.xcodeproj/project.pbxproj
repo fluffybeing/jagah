@@ -57,6 +57,9 @@
 		C004A9511B37088B004BEC66 /* sunbathing.png in Resources */ = {isa = PBXBuildFile; fileRef = C004A91A1B37088B004BEC66 /* sunbathing.png */; };
 		C004A9531B37088B004BEC66 /* tower15.png in Resources */ = {isa = PBXBuildFile; fileRef = C004A91C1B37088B004BEC66 /* tower15.png */; };
 		C004A9541B37088B004BEC66 /* town.png in Resources */ = {isa = PBXBuildFile; fileRef = C004A91D1B37088B004BEC66 /* town.png */; };
+		C004A9561B371566004BEC66 /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A9551B371566004BEC66 /* CategoryViewCell.swift */; };
+		C004A9581B3716B4004BEC66 /* SupportedPlacesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A9571B3716B4004BEC66 /* SupportedPlacesData.swift */; };
+		C004A95A1B371AC8004BEC66 /* CategoryEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A9591B371AC8004BEC66 /* CategoryEntries.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +127,9 @@
 		C004A91A1B37088B004BEC66 /* sunbathing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sunbathing.png; sourceTree = "<group>"; };
 		C004A91C1B37088B004BEC66 /* tower15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tower15.png; sourceTree = "<group>"; };
 		C004A91D1B37088B004BEC66 /* town.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = town.png; sourceTree = "<group>"; };
+		C004A9551B371566004BEC66 /* CategoryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
+		C004A9571B3716B4004BEC66 /* SupportedPlacesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportedPlacesData.swift; sourceTree = "<group>"; };
+		C004A9591B371AC8004BEC66 /* CategoryEntries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryEntries.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				C004A8CD1B36D80B004BEC66 /* PlaceCollectionViewCell.swift */,
+				C004A9551B371566004BEC66 /* CategoryViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -247,6 +254,8 @@
 				C004A8C51B36C6C2004BEC66 /* TPConvenience.swift */,
 				C004A8C71B36C834004BEC66 /* TPPlace.swift */,
 				C004A8C91B36C84B004BEC66 /* TPReview.swift */,
+				C004A9571B3716B4004BEC66 /* SupportedPlacesData.swift */,
+				C004A9591B371AC8004BEC66 /* CategoryEntries.swift */,
 			);
 			name = TourPedia;
 			sourceTree = "<group>";
@@ -435,16 +444,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C004A95A1B371AC8004BEC66 /* CategoryEntries.swift in Sources */,
 				C004A8C41B36BD4B004BEC66 /* TPClient.swift in Sources */,
 				C004A8C21B36BD3D004BEC66 /* TPConstants.swift in Sources */,
 				C004A8E21B370173004BEC66 /* ReviewViewController.swift in Sources */,
 				C004A8E41B370188004BEC66 /* ReviewDetailViewController.swift in Sources */,
 				C004A8CA1B36C84B004BEC66 /* TPReview.swift in Sources */,
 				C004A8C61B36C6C2004BEC66 /* TPConvenience.swift in Sources */,
+				C004A9581B3716B4004BEC66 /* SupportedPlacesData.swift in Sources */,
 				C004A8CE1B36D80B004BEC66 /* PlaceCollectionViewCell.swift in Sources */,
 				C004A8C81B36C834004BEC66 /* TPPlace.swift in Sources */,
 				C004A89D1B368F52004BEC66 /* PlaceViewController.swift in Sources */,
 				C004A8E01B37013B004BEC66 /* CategoryViewController.swift in Sources */,
+				C004A9561B371566004BEC66 /* CategoryViewCell.swift in Sources */,
 				C004A89B1B368F52004BEC66 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

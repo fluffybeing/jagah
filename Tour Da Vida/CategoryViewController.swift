@@ -11,12 +11,15 @@ import UIKit
 
 class CategoryViewController: UITableViewController {
     
-    var categories = ["one", "two", "three", "four", "Five", "Six"]
+    var category = CategoryData()
     
     // MARK: - UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Navigation controller title update
+        self.navigationController?.navigationBar.topItem?.title = "Categories"
         
     }
     
@@ -28,19 +31,25 @@ class CategoryViewController: UITableViewController {
     // MARK: - UITableViewController
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categories.count
+        return category.entry.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell = self.tableView.dequeueReusableCellWithIdentifier("CategoryViewCell") as! UITableViewCell
+        var cell = self.tableView.dequeueReusableCellWithIdentifier("CategoryViewCell") as! CategoryViewCell
+        
+        // get the entry object
+        let entry = category.entry[indexPath.row]
+        cell.categoryName.text = entry.categoryName
+        cell.categoryIcon.image = UIImage(named: entry.imageFilename)
+        
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         // Get the selected categories
-        let selectedCategories = categories[indexPath.row]
+        let selectedCategories = category.entry[indexPath.row]
         
         // Get a reviewController from the Storyboard
         let reviewController = self.storyboard!.instantiateViewControllerWithIdentifier("ReviewViewController") as! ReviewViewController
