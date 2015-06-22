@@ -132,7 +132,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPj-Ta-prf">
-                                            <rect key="frame" x="86" y="28" width="170" height="21"/>
+                                            <rect key="frame" x="134" y="28" width="170" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="4Ns-yl-gTN"/>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="58A-hn-K7N"/>
@@ -146,8 +146,8 @@
                                     <constraints>
                                         <constraint firstItem="tBU-C9-uFe" firstAttribute="top" secondItem="CU7-4i-wFf" secondAttribute="topMargin" constant="-4" id="28L-Xs-4WE"/>
                                         <constraint firstItem="DPj-Ta-prf" firstAttribute="top" secondItem="CU7-4i-wFf" secondAttribute="top" constant="28" id="4yx-4v-mE0"/>
-                                        <constraint firstItem="DPj-Ta-prf" firstAttribute="leading" secondItem="tBU-C9-uFe" secondAttribute="trailing" constant="8" symbolic="YES" id="I9M-5O-OTy"/>
-                                        <constraint firstItem="DPj-Ta-prf" firstAttribute="leading" secondItem="CU7-4i-wFf" secondAttribute="leadingMargin" constant="78" id="zoH-Lx-lUV"/>
+                                        <constraint firstItem="DPj-Ta-prf" firstAttribute="leading" secondItem="tBU-C9-uFe" secondAttribute="trailing" constant="56" id="I9M-5O-OTy"/>
+                                        <constraint firstItem="DPj-Ta-prf" firstAttribute="leading" secondItem="CU7-4i-wFf" secondAttribute="leadingMargin" constant="126" id="zoH-Lx-lUV"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
@@ -175,9 +175,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="XWr-Sw-aWQ">
-                            <rect key="frame" x="0.0" y="96" width="600" height="20"/>
+                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" id="XWr-Sw-aWQ">
+                            <rect key="frame" x="0.0" y="96" width="600" height="37"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="color" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </activityIndicatorView>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReviewViewCell" rowHeight="74" id="4aC-8y-4Uh" customClass="ReviewViewCell" customModule="Tour_Da_Vida" customModuleProvider="target">

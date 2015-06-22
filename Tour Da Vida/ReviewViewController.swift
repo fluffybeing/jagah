@@ -42,11 +42,12 @@ class ReviewViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        // start indicator 
         self.activityIndicator.alpha = 1.0
         self.activityIndicator.startAnimating()
+    
         
         self.navigationItem.title = "Reviews"
-        
     }
     
     override func viewDidAppear(animated: Bool) {
