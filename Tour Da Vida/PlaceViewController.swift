@@ -47,8 +47,8 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        println("Selected this Cell \(placeData.entryPlaces[indexPath.row])")
-        // Get a reviewController from the Storyboard
+
+        // Get a categoryController from the Storyboard
         let categoryController = self.storyboard!.instantiateViewControllerWithIdentifier("CategoryViewController") as! CategoryViewController
         
         // Push the new controller onto the stack

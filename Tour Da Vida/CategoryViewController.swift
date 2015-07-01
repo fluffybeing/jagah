@@ -59,4 +59,16 @@ class CategoryViewController: UITableViewController {
         self.navigationController!.pushViewController(reviewController, animated: true)
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!){
+        // get the selected index row
+        let selectedRow = self.tableView.indexPathForSelectedRow()!
+        
+        // get the navigation controller
+        let navVC = segue.destinationViewController as! UINavigationController
+        
+        let reviewVC = navVC.viewControllers.first as! ReviewViewController
+        
+        
+    }
+    
 }

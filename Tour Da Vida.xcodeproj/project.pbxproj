@@ -567,6 +567,7 @@
 				C004A8B61B368F52004BEC66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C004A8B71B368F52004BEC66 /* Build configuration list for PBXNativeTarget "Tour Da VidaTests" */ = {
 			isa = XCConfigurationList;
@@ -575,6 +576,7 @@
 				C004A8B91B368F52004BEC66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

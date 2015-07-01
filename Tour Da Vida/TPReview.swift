@@ -10,11 +10,11 @@ import Foundation
 
 struct TPReview {
     
-    var text = ""
-    var rating = 0
-    var reviewTime = ""
-    var source = ""
-    var wordCount = 0
+    var text:String = ""
+    var rating:Int = 0
+    var reviewTime:String
+    var source:String
+    var wordCount:Int
     
     /* Construct a TPPlace from a dictionary */
     init(dictionary: [String : AnyObject]) {
@@ -36,6 +36,6 @@ struct TPReview {
             reviews.append(TPReview(dictionary: result))
         }
         
-        return Array(reviews[0...20])
+        return Array(reviews[0...30])
     }
 }
