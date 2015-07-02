@@ -9,6 +9,7 @@
 import Foundation
 
 class PlaceData {
+    /* 1. Entry class for storing location and its image */
     class Enrty {
         let imageFilename: String
         let locationName: String
@@ -19,6 +20,7 @@ class PlaceData {
         }
     }
     
+    /*2. Initialise some data */
     let entryPlaces = [
         Enrty(imageFilename: "amsterdam.jpg", locationName: "Amsterdam"),
         Enrty(imageFilename: "barcelona.jpg", locationName: "Barcelona"),

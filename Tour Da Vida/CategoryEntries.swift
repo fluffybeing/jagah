@@ -20,7 +20,7 @@ class CategoryData {
     }
     
     let entry = [
-        Enrty(imageFilename: "sunbathing.png", categoryName: "Accomodation"),
+        Enrty(imageFilename: "sunbathing.png", categoryName: "Accommodation"),
         Enrty(imageFilename: "heart206.png", categoryName: "Point Of Interest"),
         Enrty(imageFilename: "coconut5.png", categoryName: "Restaurant"),
         Enrty(imageFilename: "castle7.png", categoryName: "Attraction")

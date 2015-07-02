@@ -45,13 +45,21 @@ extension TPClient {
     
     // MARK: - GET Convenience Methods
     
-    func getReviews(completionHandler: (result: [TPReview]?, error: NSError?) -> Void) {
+    func getReviews(location:String, category:String, completionHandler: (result: [TPReview]?, error: NSError?) -> Void) {
+        
+        // update category parameter
+        var modifiedCategoryName:String
+        
+        if category == "Point Of Interest" {
+            modifiedCategoryName = "poi"
+        } else {
+            modifiedCategoryName = category.lowercaseString
+        }
         
         /* 1. Specify parameters, method (if has {key}), and HTTP body (if POST) */
         let parameters = [
-            TPClient.ParameterKeys.location: "Berlin",
-            TPClient.ParameterKeys.category: "restaurant",
-            TPClient.ParameterKeys.name: "La Dolce Vita",
+            TPClient.ParameterKeys.location: location,
+            TPClient.ParameterKeys.category: modifiedCategoryName,
             TPClient.ParameterKeys.language: "en"
         ]
         
@@ -75,6 +83,27 @@ extension TPClient {
                 }
             }
         }
+    }
+    
+    func getReviewDetails(url:NSURL, completionHandler: (result: AnyObject!, error: NSError?) -> Void) -> NSURLSessionDataTask {
+        let request = NSURLRequest(URL: url)
+        /* 4. Make the request */
+        let task = session.dataTaskWithRequest(request) {data, response, downloadError in
+            
+            /* 5/6. Parse the data and use the data (happens in completion handler) */
+            if let error = downloadError {
+                let newError = TPClient.errorForData(data, response: response, error: error)
+                completionHandler(result: nil, error: downloadError)
+            } else {
+                TPClient.parseJSONWithCompletionHandler(data, completionHandler: completionHandler)
+            }
+        }
+        
+        /* 7. Start the request */
+        task.resume()
+        
+        return task
+
     }
 
 }

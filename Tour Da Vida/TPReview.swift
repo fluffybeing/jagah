@@ -15,6 +15,7 @@ struct TPReview {
     var reviewTime:String
     var source:String
     var wordCount:Int
+    var detailURL:String
     
     /* Construct a TPPlace from a dictionary */
     init(dictionary: [String : AnyObject]) {
@@ -24,6 +25,7 @@ struct TPReview {
         text = dictionary[TPClient.JSONResponseKeys.ReviewText] as! String
         reviewTime = dictionary[TPClient.JSONResponseKeys.ReviewTime] as! String
         wordCount = dictionary[TPClient.JSONResponseKeys.ReviewWordsCount] as! Int
+        detailURL = dictionary[TPClient.JSONResponseKeys.ReviewDetails] as! String
         
     }
     
@@ -37,5 +39,23 @@ struct TPReview {
         }
         
         return Array(reviews[0...30])
+    }
+}
+
+struct TPReviewDetail {
+    
+//    var id:Int = 0
+//    var reviewTime:String
+//    var name:String
+    var place = [String:AnyObject]()
+    
+    /* Construct a TPPlace from a dictionary */
+    init(dictionary: [String : AnyObject]) {
+        place = dictionary["place"] as! [String:AnyObject]
+    }
+    
+    /* Helper: Given an array of dictionaries, convert them to an array of TPReview objects */
+    static func reviewDetailFromResults(result: [String : AnyObject]) -> TPReviewDetail {
+        return TPReviewDetail(dictionary: result)
     }
 }

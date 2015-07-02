@@ -16,10 +16,13 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        collectionView!.dataSource = self
-        collectionView!.delegate = self
-        
+            // Do any additional setup after loading the view, typically from a nib.
+            collectionView!.dataSource = self
+            collectionView!.delegate = self
+        }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
         // Navigation controller title update
         self.navigationItem.title = "Home"
     }
@@ -51,6 +54,10 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
         // Get a categoryController from the Storyboard
         let categoryController = self.storyboard!.instantiateViewControllerWithIdentifier("CategoryViewController") as! CategoryViewController
         
+        // pass the data
+        let entry = placeData.entryPlaces[indexPath.row]
+        categoryController.location = entry.locationName
+        
         // Push the new controller onto the stack
         self.navigationController!.pushViewController(categoryController, animated: true)
     }
@@ -65,7 +72,7 @@ extension PlaceViewController : UICollectionViewDelegateFlowLayout {
             return CGSize(width: 140, height: 240)
     }
     
-    //3
+    //2
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,insetForSectionAtIndex section: Int) -> UIEdgeInsets {
             let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 50.0, right: 10.0)
             return sectionInsets

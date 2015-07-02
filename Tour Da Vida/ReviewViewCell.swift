@@ -65,6 +65,7 @@ public func dateFromString(date: String, format: String) -> NSDate {
     }
 }
 
+// humanize time
 public func timeAgoSinceDate(date:NSDate, numericDates:Bool) -> String {
     let calendar = NSCalendar.currentCalendar()
     let unitFlags = NSCalendarUnit.CalendarUnitMinute | NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitDay | NSCalendarUnit.CalendarUnitWeekOfYear | NSCalendarUnit.CalendarUnitMonth | NSCalendarUnit.CalendarUnitYear | NSCalendarUnit.CalendarUnitSecond

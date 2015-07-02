@@ -12,7 +12,11 @@ import UIKit
 class ReviewViewController: UITableViewController {
     
     var reviews: [TPReview] = [TPReview]()
-    var placeName:String = "Berlin"
+    // var reviewDetail:TPReviewDetail = TPReviewDetail(dictionary: ["place": ])
+    
+    // this values is coming from selected cell
+    var location:String = ""
+    var category:String = ""
     
     //write this in your class
     var isSorted:Bool = false
@@ -24,8 +28,8 @@ class ReviewViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        TPClient.sharedInstance().getReviews {reviews, error in
+
+        TPClient.sharedInstance().getReviews(self.location, category: self.category, completionHandler: {reviews, error in
             if let reviews = reviews {
                 self.reviews = reviews
                 
@@ -41,8 +45,9 @@ class ReviewViewController: UITableViewController {
             } else {
                 println(error)
             }
-        }
+        })
         
+        // sort button
         var sortButton : UIBarButtonItem = UIBarButtonItem(title: "Sort", style: UIBarButtonItemStyle.Plain, target: self, action: "timeFilterList")
         self.navigationItem.rightBarButtonItem = sortButton
        
@@ -73,16 +78,29 @@ class ReviewViewController: UITableViewController {
         
         var cell = self.tableView.dequeueReusableCellWithIdentifier("ReviewViewCell") as! ReviewViewCell
         
-       var review = reviews[indexPath.row]
+        var review = reviews[indexPath.row]
        
+        // get 10 words of review text
+        var reviewSnippet = split(review.text){$0 == " "}
+        if reviewSnippet.count > 10 {
+            cell.reviewSnippet.text = " ".join(Array(reviewSnippet[0...10]))
+        } else {
+            cell.reviewSnippet.text = " ".join(reviewSnippet)
+        }
+        
+        // Review Details
+        println(review.detailURL)
+        
+        println(getMoreReviewInfo(NSURL(string: review.detailURL)!))
+        // println(self.reviewDetail)
+        
        // show the placename, date, review snippet and humanize time
-       cell.placeName.text = self.placeName
-       cell.reviewSnippet.text = review.text
+       cell.placeName.text = self.location
        cell.placeIcon.image = UIImage(named: "badge-place")
        cell.reviewIcon.image = UIImage(named: "comment")
        
        // humanize time
-       let timeAgo = dateFromString(review.reviewTime, "yyyy-MM-dd'T'HH:mm:ssZ")
+       let timeAgo = dateFromString(review.reviewTime, "yyyy-MM-dd")
        cell.reviewDate.text = timeAgoSinceDate(timeAgo, true)
         
         return cell
@@ -101,7 +119,8 @@ class ReviewViewController: UITableViewController {
     }
     
     func timeFilterList() {
-        print("Filter got called")
+
+        // toggle the sort function
         if isSorted == false {
             // should probably be called sort and not filter
             // sort the  reviews by date
@@ -110,10 +129,25 @@ class ReviewViewController: UITableViewController {
         } else {
             reviews.sort() { dateFromString($0.reviewTime, "yyyy-MM-dd").compare(dateFromString($1.reviewTime, "yyyy-MM-dd")) == NSComparisonResult.OrderedDescending }
             isSorted = false
-            
         }
-
-    self.tableView.reloadData(); // notify the table view the data has changed
+        self.tableView.reloadData(); // notify the table view the data has changed
     }
-        
+    
+    func getMoreReviewInfo(url: NSURL) {
+        println("i am inside")
+        TPClient.sharedInstance().getReviewDetails(url) { JSONResult, error in
+            /* 3. Send the desired value(s) to completion handler */
+            if let error = error {
+                println("No Detail Data Avaiable")
+            } else {
+                if let result = JSONResult as? [String : AnyObject] {
+                    // self.reviewDetail = TPReviewDetail.reviewDetailFromResults(result)
+                    println(TPReviewDetail.reviewDetailFromResults(result))
+                } else {
+                    println("Error while parsing review detail")
+                }
+            }
+    
+        }
+    }
 }

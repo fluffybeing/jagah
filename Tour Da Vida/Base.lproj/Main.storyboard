@@ -104,6 +104,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="bNU-5G-xme" id="93z-TB-pKQ"/>
+                        <segue destination="RuW-Ri-crs" kind="show" identifier="homeToCategory" id="MrD-4G-d8R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -162,6 +163,9 @@
                             <outlet property="delegate" destination="RuW-Ri-crs" id="ehH-B3-ntj"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="01v-cm-56U" kind="show" identifier="categoryToReview" id="wt5-cH-4mQ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zxd-BL-NrA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -257,6 +261,7 @@
                     </tableView>
                     <connections>
                         <outlet property="activityIndicator" destination="XWr-Sw-aWQ" id="je0-9y-wcv"/>
+                        <segue destination="E2h-Rd-hBr" kind="show" identifier="reviewToDetail" id="4JT-69-hDO"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IkS-NM-J2f" userLabel="First Responder" sceneMemberID="firstResponder"/>

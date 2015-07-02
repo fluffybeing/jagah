@@ -13,8 +13,9 @@ class CategoryViewController: UITableViewController {
     
     var category = CategoryData()
     
-    // MARK: - UIViewController
+    var location:String = ""
     
+    // MARK: - UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -50,25 +51,16 @@ class CategoryViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         // Get the selected categories
-        let selectedCategories = category.entry[indexPath.row]
+        let selectedCategory = category.entry[indexPath.row]
         
         // Get a reviewController from the Storyboard
         let reviewController = self.storyboard!.instantiateViewControllerWithIdentifier("ReviewViewController") as! ReviewViewController
         
+        // pass the date
+        reviewController.location = self.location
+        reviewController.category = selectedCategory.categoryName
+
         // Push the new controller onto the stack
         self.navigationController!.pushViewController(reviewController, animated: true)
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!){
-        // get the selected index row
-        let selectedRow = self.tableView.indexPathForSelectedRow()!
-        
-        // get the navigation controller
-        let navVC = segue.destinationViewController as! UINavigationController
-        
-        let reviewVC = navVC.viewControllers.first as! ReviewViewController
-        
-        
-    }
-    
 }
