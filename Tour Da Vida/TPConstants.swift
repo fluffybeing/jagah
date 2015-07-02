@@ -57,7 +57,7 @@ extension TPClient {
         
         // MARK: Places
         static let PlaceAddress = "address"
-        static let PlaceCategory = "attraction"
+        static let PlaceCategory = "category"
         static let PlaceId = "id"
         static let PlaceLat = "lat"
         static let PlaceLng = "lng"

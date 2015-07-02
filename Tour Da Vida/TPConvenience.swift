@@ -86,11 +86,16 @@ extension TPClient {
     }
     
     func getReviewDetails(url:NSURL, completionHandler: (result: AnyObject!, error: NSError?) -> Void) -> NSURLSessionDataTask {
-        let request = NSURLRequest(URL: url)
-        /* 4. Make the request */
+        
+        /* 1. Prepare for request*/
+        
+        let request = NSMutableURLRequest(URL: url)
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        /* 2. Make the request */
         let task = session.dataTaskWithRequest(request) {data, response, downloadError in
             
-            /* 5/6. Parse the data and use the data (happens in completion handler) */
+            /* 3/4. Parse the data and use the data (happens in completion handler) */
             if let error = downloadError {
                 let newError = TPClient.errorForData(data, response: response, error: error)
                 completionHandler(result: nil, error: downloadError)
@@ -103,7 +108,8 @@ extension TPClient {
         task.resume()
         
         return task
-
+        
     }
 
 }
+

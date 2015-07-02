@@ -12,7 +12,7 @@ import UIKit
 class ReviewViewController: UITableViewController {
     
     var reviews: [TPReview] = [TPReview]()
-    // var reviewDetail:TPReviewDetail = TPReviewDetail(dictionary: ["place": ])
+    var reviewDetailData:TPReviewDetail?
     
     // this values is coming from selected cell
     var location:String = ""
@@ -32,10 +32,6 @@ class ReviewViewController: UITableViewController {
         TPClient.sharedInstance().getReviews(self.location, category: self.category, completionHandler: {reviews, error in
             if let reviews = reviews {
                 self.reviews = reviews
-                
-                // deactivate the indicator after data loading is complete
-                self.activityIndicator.alpha = 0.0
-                self.activityIndicator.stopAnimating()
                 
                 // reload table cell in main thread
                 dispatch_async(dispatch_get_main_queue()) {
@@ -75,10 +71,10 @@ class ReviewViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
+    
         var cell = self.tableView.dequeueReusableCellWithIdentifier("ReviewViewCell") as! ReviewViewCell
         
-        var review = reviews[indexPath.row]
+        let review = reviews[indexPath.row]
        
         // get 10 words of review text
         var reviewSnippet = split(review.text){$0 == " "}
@@ -88,15 +84,30 @@ class ReviewViewController: UITableViewController {
             cell.reviewSnippet.text = " ".join(reviewSnippet)
         }
         
-        // Review Details
-        println(review.detailURL)
-        
-        println(getMoreReviewInfo(NSURL(string: review.detailURL)!))
-        // println(self.reviewDetail)
-        
+        // get url of detail review
+        var reviewURL = NSURL(string: review.detailURL)!
+        TPClient.sharedInstance().getReviewDetails(reviewURL, completionHandler: {JSONResult, error in
+            
+            if let data = JSONResult as? [String:AnyObject] {
+                // println(data["place"])
+                self.reviewDetailData = TPReviewDetail.reviewDetailFromResults(data["place"]! as! [String : AnyObject])
+                
+                // deactivate the indicator after data loading is complete
+                self.activityIndicator.alpha = 0.0
+                self.activityIndicator.stopAnimating()
+                
+                // reload table cell in main thread
+                dispatch_async(dispatch_get_main_queue()) {
+                    cell.placeName.text = self.reviewDetailData?.name
+                }
+
+            } else {
+                println(error)
+            }
+        })
+
        // show the placename, date, review snippet and humanize time
-       cell.placeName.text = self.location
-       cell.placeIcon.image = UIImage(named: "badge-place")
+       cell.placeIcon.image = getSourceIcon(review.source)
        cell.reviewIcon.image = UIImage(named: "comment")
        
        // humanize time
@@ -133,21 +144,15 @@ class ReviewViewController: UITableViewController {
         self.tableView.reloadData(); // notify the table view the data has changed
     }
     
-    func getMoreReviewInfo(url: NSURL) {
-        println("i am inside")
-        TPClient.sharedInstance().getReviewDetails(url) { JSONResult, error in
-            /* 3. Send the desired value(s) to completion handler */
-            if let error = error {
-                println("No Detail Data Avaiable")
-            } else {
-                if let result = JSONResult as? [String : AnyObject] {
-                    // self.reviewDetail = TPReviewDetail.reviewDetailFromResults(result)
-                    println(TPReviewDetail.reviewDetailFromResults(result))
-                } else {
-                    println("Error while parsing review detail")
-                }
-            }
-    
+    func getSourceIcon(source:String) -> UIImage {
+        if source == "Foursquare" {
+            return UIImage(named: "foursquare")!
+        } else if source == "Facebook" {
+            return UIImage(named: "facebook")!
+        } else if source == "Booking" {
+            return UIImage(named: "booking")!
+        } else {
+            return UIImage(named: "google")!
         }
     }
 }

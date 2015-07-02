@@ -179,8 +179,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" id="XWr-Sw-aWQ">
-                            <rect key="frame" x="0.0" y="96" width="600" height="37"/>
+                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" id="inK-6U-Mfx">
+                            <rect key="frame" x="0.0" y="186" width="600" height="37"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="color" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </activityIndicatorView>
@@ -260,7 +260,7 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="activityIndicator" destination="XWr-Sw-aWQ" id="je0-9y-wcv"/>
+                        <outlet property="activityIndicator" destination="inK-6U-Mfx" id="e5b-JE-MM3"/>
                         <segue destination="E2h-Rd-hBr" kind="show" identifier="reviewToDetail" id="4JT-69-hDO"/>
                     </connections>
                 </tableViewController>

@@ -42,16 +42,23 @@ struct TPReview {
     }
 }
 
+
 struct TPReviewDetail {
     
-//    var id:Int = 0
-//    var reviewTime:String
-//    var name:String
-    var place = [String:AnyObject]()
+    var category:String
+    var id:Int = 0
+    var location:String
+    var name:String
+    
     
     /* Construct a TPPlace from a dictionary */
     init(dictionary: [String : AnyObject]) {
-        place = dictionary["place"] as! [String:AnyObject]
+        
+        // rating = dictionary[TPClient.JSONResponseKeys.ReviewRating] as! Int
+        category = dictionary[TPClient.JSONResponseKeys.PlaceCategory] as! String
+        location = dictionary[TPClient.JSONResponseKeys.PlaceLocation] as! String
+        name = dictionary[TPClient.JSONResponseKeys.PlaceName] as! String
+        id = dictionary[TPClient.JSONResponseKeys.PlaceId] as! Int
     }
     
     /* Helper: Given an array of dictionaries, convert them to an array of TPReview objects */
