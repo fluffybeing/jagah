@@ -9,9 +9,16 @@
 import Foundation
 import UIKit
 
-class ReviewViewController: UITableViewController {
+class ReviewViewController: UITableViewController, UISearchBarDelegate, UITableViewDataSource {
+    
+    // searchBar for anagram searching
+    @IBOutlet weak var searchBar: UISearchBar!
+    var searchActive : Bool = false
     
     var reviews: [TPReview] = [TPReview]()
+    var filteredReviews = [TPReview]()
+    
+    // get place details
     var reviewDetailData:TPReviewDetail?
     
     // this values is coming from selected cell
@@ -38,13 +45,17 @@ class ReviewViewController: UITableViewController {
                     self.tableView.reloadData()
                 }
 
+                // stop indicator
+                self.activityIndicator.alpha = 0.0
+                self.activityIndicator.stopAnimating()
+
             } else {
                 println(error)
             }
         })
         
         // sort button
-        var sortButton : UIBarButtonItem = UIBarButtonItem(title: "Sort", style: UIBarButtonItemStyle.Plain, target: self, action: "timeFilterList")
+        var sortButton = UIBarButtonItem(image: UIImage(named: "sort"), style: UIBarButtonItemStyle.Done, target: self, action: "timeFilterList")
         self.navigationItem.rightBarButtonItem = sortButton
        
     }
@@ -65,16 +76,48 @@ class ReviewViewController: UITableViewController {
         
     }
     
+    // MARK: Search Bar
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        filteredReviews = reviews.filter({( review: TPReview) -> Bool in
+            let stringMatch = review.text.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+            return stringMatch != nil
+        })
+        
+        if(filteredReviews.count == 0){
+            searchActive = false;
+        } else {
+            searchActive = true;
+        }
+        // reload table cell in main thread
+        
+        self.tableView.reloadData()
+        
+    }
+
+
     // MARK: - UITableViewController
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if(searchActive) {
+            return  self.filteredReviews.count
+        }
         return reviews.count
+        
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     
         var cell = self.tableView.dequeueReusableCellWithIdentifier("ReviewViewCell") as! ReviewViewCell
         
-        let review = reviews[indexPath.row]
+        // declare reviws data
+        let review:TPReview!
+        
+        if(searchActive){
+            review = filteredReviews[indexPath.row]
+        } else {
+            review = reviews[indexPath.row]
+        }
        
         // get 10 words of review text
         var reviewSnippet = split(review.text){$0 == " "}
@@ -91,11 +134,6 @@ class ReviewViewController: UITableViewController {
             if let data = JSONResult as? [String:AnyObject] {
                 // println(data["place"])
                 self.reviewDetailData = TPReviewDetail.reviewDetailFromResults(data["place"]! as! [String : AnyObject])
-                
-                // deactivate the indicator after data loading is complete
-                self.activityIndicator.alpha = 0.0
-                self.activityIndicator.stopAnimating()
-                
                 // reload table cell in main thread
                 dispatch_async(dispatch_get_main_queue()) {
                     cell.placeName.text = self.reviewDetailData?.name
@@ -144,6 +182,7 @@ class ReviewViewController: UITableViewController {
         self.tableView.reloadData(); // notify the table view the data has changed
     }
     
+    // Helpers
     func getSourceIcon(source:String) -> UIImage {
         if source == "Foursquare" {
             return UIImage(named: "foursquare")!

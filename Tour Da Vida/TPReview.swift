@@ -33,12 +33,12 @@ struct TPReview {
     static func reviewsFromResults(results: [[String : AnyObject]]) -> [TPReview] {
         var reviews = [TPReview]()
         
+        
         // limit the result to 20
         for result in results {
             reviews.append(TPReview(dictionary: result))
         }
-        
-        return Array(reviews[0...30])
+        return Array(reviews[0...20])
     }
 }
 

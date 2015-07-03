@@ -22,7 +22,7 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
         }
     
     override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillAppear(animated)
         // Navigation controller title update
         self.navigationItem.title = "Home"
     }
@@ -74,7 +74,7 @@ extension PlaceViewController : UICollectionViewDelegateFlowLayout {
     
     //2
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-            let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 50.0, right: 10.0)
+            let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 40.0, right: 10.0)
             return sectionInsets
     }
 }

@@ -42,6 +42,12 @@ class CategoryViewController: UITableViewController {
         
         // get the entry object
         let entry = category.entry[indexPath.row]
+        
+        cell.selectionStyle = UITableViewCellSelectionStyle.Blue
+        // Standard options
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+
+        
         cell.categoryName.text = entry.categoryName
         cell.categoryIcon.image = UIImage(named: entry.imageFilename)
         

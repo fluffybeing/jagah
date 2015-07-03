@@ -39,6 +39,7 @@
 		C004A95A1B371AC8004BEC66 /* CategoryEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A9591B371AC8004BEC66 /* CategoryEntries.swift */; };
 		C004A95C1B374445004BEC66 /* ReviewViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A95B1B374445004BEC66 /* ReviewViewCell.swift */; };
 		C01568911B457571005D1611 /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01568901B457571005D1611 /* LoadingTableViewCell.swift */; };
+		C015689B1B4688A6005D1611 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015689A1B4688A6005D1611 /* NavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		C004A9591B371AC8004BEC66 /* CategoryEntries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryEntries.swift; sourceTree = "<group>"; };
 		C004A95B1B374445004BEC66 /* ReviewViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewCell.swift; sourceTree = "<group>"; };
 		C01568901B457571005D1611 /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
+		C015689A1B4688A6005D1611 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 				C004A8DF1B37013B004BEC66 /* CategoryViewController.swift */,
 				C004A8E11B370173004BEC66 /* ReviewViewController.swift */,
 				C004A8E31B370188004BEC66 /* ReviewDetailViewController.swift */,
+				C015689A1B4688A6005D1611 /* NavigationViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				C004A95A1B371AC8004BEC66 /* CategoryEntries.swift in Sources */,
 				C004A95C1B374445004BEC66 /* ReviewViewCell.swift in Sources */,
 				C004A8C41B36BD4B004BEC66 /* TPClient.swift in Sources */,
+				C015689B1B4688A6005D1611 /* NavigationViewController.swift in Sources */,
 				C004A8C21B36BD3D004BEC66 /* TPConstants.swift in Sources */,
 				C004A8E21B370173004BEC66 /* ReviewViewController.swift in Sources */,
 				C004A8E41B370188004BEC66 /* ReviewDetailViewController.swift in Sources */,
