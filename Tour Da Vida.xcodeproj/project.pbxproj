@@ -10,7 +10,6 @@
 		C004A89B1B368F52004BEC66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A89A1B368F52004BEC66 /* AppDelegate.swift */; };
 		C004A89D1B368F52004BEC66 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A89C1B368F52004BEC66 /* PlaceViewController.swift */; };
 		C004A8A01B368F52004BEC66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C004A89E1B368F52004BEC66 /* Main.storyboard */; };
-		C004A8A21B368F52004BEC66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C004A8A11B368F52004BEC66 /* Images.xcassets */; };
 		C004A8A51B368F52004BEC66 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C004A8A31B368F52004BEC66 /* LaunchScreen.xib */; };
 		C004A8B11B368F52004BEC66 /* Tour_Da_VidaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A8B01B368F52004BEC66 /* Tour_Da_VidaTests.swift */; };
 		C004A8C21B36BD3D004BEC66 /* TPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A8C11B36BD3D004BEC66 /* TPConstants.swift */; };
@@ -40,6 +39,13 @@
 		C004A95C1B374445004BEC66 /* ReviewViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004A95B1B374445004BEC66 /* ReviewViewCell.swift */; };
 		C01568911B457571005D1611 /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01568901B457571005D1611 /* LoadingTableViewCell.swift */; };
 		C015689B1B4688A6005D1611 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015689A1B4688A6005D1611 /* NavigationViewController.swift */; };
+		C01578881B49205400031AA2 /* Aerial01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C01578811B49205400031AA2 /* Aerial01.jpg */; };
+		C01578891B49205400031AA2 /* Aerial02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C01578821B49205400031AA2 /* Aerial02.jpg */; };
+		C015788A1B49205400031AA2 /* Aerial03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C01578831B49205400031AA2 /* Aerial03.jpg */; };
+		C015788B1B49205400031AA2 /* Aerial04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C01578841B49205400031AA2 /* Aerial04.jpg */; };
+		C015788C1B49205400031AA2 /* Aerial05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C01578851B49205400031AA2 /* Aerial05.jpg */; };
+		C015788D1B49205400031AA2 /* Aerial06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C01578861B49205400031AA2 /* Aerial06.jpg */; };
+		C015788E1B49205400031AA2 /* Aerial07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C01578871B49205400031AA2 /* Aerial07.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +64,6 @@
 		C004A89A1B368F52004BEC66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C004A89C1B368F52004BEC66 /* PlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
 		C004A89F1B368F52004BEC66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C004A8A11B368F52004BEC66 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C004A8A41B368F52004BEC66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C004A8AA1B368F52004BEC66 /* Tour Da VidaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tour Da VidaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C004A8AF1B368F52004BEC66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,6 +95,13 @@
 		C004A95B1B374445004BEC66 /* ReviewViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewCell.swift; sourceTree = "<group>"; };
 		C01568901B457571005D1611 /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
 		C015689A1B4688A6005D1611 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		C01578811B49205400031AA2 /* Aerial01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aerial01.jpg; sourceTree = "<group>"; };
+		C01578821B49205400031AA2 /* Aerial02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aerial02.jpg; sourceTree = "<group>"; };
+		C01578831B49205400031AA2 /* Aerial03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aerial03.jpg; sourceTree = "<group>"; };
+		C01578841B49205400031AA2 /* Aerial04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aerial04.jpg; sourceTree = "<group>"; };
+		C01578851B49205400031AA2 /* Aerial05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aerial05.jpg; sourceTree = "<group>"; };
+		C01578861B49205400031AA2 /* Aerial06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aerial06.jpg; sourceTree = "<group>"; };
+		C01578871B49205400031AA2 /* Aerial07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aerial07.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +148,6 @@
 				C004A8BA1B36BA27004BEC66 /* Model */,
 				C004A89A1B368F52004BEC66 /* AppDelegate.swift */,
 				C004A8BD1B36BA86004BEC66 /* Storyboard */,
-				C004A8A11B368F52004BEC66 /* Images.xcassets */,
 				C004A8981B368F52004BEC66 /* Supporting Files */,
 			);
 			path = "Tour Da Vida";
@@ -145,6 +156,7 @@
 		C004A8981B368F52004BEC66 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C049E9521B46B8FC00F94A04 /* placeImages */,
 				C004A8E61B37086C004BEC66 /* Categories Icons */,
 				C004A8E51B370699004BEC66 /* cities */,
 				C004A8991B368F52004BEC66 /* Info.plist */,
@@ -249,6 +261,20 @@
 			name = "Categories Icons";
 			sourceTree = "<group>";
 		};
+		C049E9521B46B8FC00F94A04 /* placeImages */ = {
+			isa = PBXGroup;
+			children = (
+				C01578811B49205400031AA2 /* Aerial01.jpg */,
+				C01578821B49205400031AA2 /* Aerial02.jpg */,
+				C01578831B49205400031AA2 /* Aerial03.jpg */,
+				C01578841B49205400031AA2 /* Aerial04.jpg */,
+				C01578851B49205400031AA2 /* Aerial05.jpg */,
+				C01578861B49205400031AA2 /* Aerial06.jpg */,
+				C01578871B49205400031AA2 /* Aerial07.jpg */,
+			);
+			name = placeImages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -330,20 +356,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				C004A8A01B368F52004BEC66 /* Main.storyboard in Resources */,
+				C015788E1B49205400031AA2 /* Aerial07.jpg in Resources */,
+				C015788B1B49205400031AA2 /* Aerial04.jpg in Resources */,
 				C004A8DE1B370033004BEC66 /* tuscany.jpg in Resources */,
+				C015788D1B49205400031AA2 /* Aerial06.jpg in Resources */,
+				C015788C1B49205400031AA2 /* Aerial05.jpg in Resources */,
 				C004A8D91B370033004BEC66 /* berlin.jpg in Resources */,
 				C004A9261B37088B004BEC66 /* castle7.png in Resources */,
 				C004A8D81B370033004BEC66 /* barcelona.jpg in Resources */,
 				C004A8DB1B370033004BEC66 /* london.jpg in Resources */,
+				C015788A1B49205400031AA2 /* Aerial03.jpg in Resources */,
 				C004A9511B37088B004BEC66 /* sunbathing.png in Resources */,
 				C004A8A51B368F52004BEC66 /* LaunchScreen.xib in Resources */,
 				C004A8DC1B370033004BEC66 /* paris.jpg in Resources */,
 				C004A9331B37088B004BEC66 /* heart206.png in Resources */,
 				C004A9281B37088B004BEC66 /* coconut5.png in Resources */,
+				C01578891B49205400031AA2 /* Aerial02.jpg in Resources */,
 				C004A8DD1B370033004BEC66 /* rome.jpg in Resources */,
 				C004A8D01B36DE99004BEC66 /* amsterdam.jpg in Resources */,
+				C01578881B49205400031AA2 /* Aerial01.jpg in Resources */,
 				C004A8DA1B370033004BEC66 /* dubai.jpg in Resources */,
-				C004A8A21B368F52004BEC66 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

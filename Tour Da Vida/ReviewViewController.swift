@@ -80,8 +80,9 @@ class ReviewViewController: UITableViewController, UISearchBarDelegate, UITableV
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         
         filteredReviews = reviews.filter({( review: TPReview) -> Bool in
-            let stringMatch = review.text.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
-            return stringMatch != nil
+            let reviewStringMatch = review.text.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+            let nameStringMatch = review.source.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+            return reviewStringMatch != nil || nameStringMatch != nil
         })
         
         if(filteredReviews.count == 0){
