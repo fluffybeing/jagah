@@ -98,13 +98,10 @@ class ReviewViewController: UITableViewController, UISearchBarDelegate, UITableV
     func filterContentForSearchText(searchText: String) {
         // Filter the array using the filter method
         self.filteredReviews = reviews.filter({( review: TPReview) -> Bool in
-            // let reviewStringMatch = review.text.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
-            // let nameStringMatch = review.source.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
-            // return reviewStringMatch != nil || nameStringMatch != nil || placeStringMatch != nil
-            
+            let reviewStringMatch = review.text.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
             // filter on the basis of the place name
             let placeStringMatch = review.placeName?.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
-            return placeStringMatch != nil
+            return reviewStringMatch != nil || placeStringMatch != nil
         })
     }
     
