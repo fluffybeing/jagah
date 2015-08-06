@@ -9,17 +9,18 @@
 import Foundation
 import UIKit
 
-class ReviewViewController: UITableViewController, UISearchBarDelegate, UITableViewDataSource {
+class ReviewViewController: UITableViewController, UISearchBarDelegate, UITableViewDataSource,UISearchDisplayDelegate {
     
     // searchBar for anagram searching
     @IBOutlet weak var searchBar: UISearchBar!
     var searchActive : Bool = false
     
-    var reviews: [TPReview] = [TPReview]()
+    var reviews = [TPReview]()
     var filteredReviews = [TPReview]()
     
     // get place details
     var reviewDetailData:TPReviewDetail?
+    var detailReviews = [TPReviewDetail]()
     
     // this values is coming from selected cell
     var location:String = ""
@@ -77,13 +78,34 @@ class ReviewViewController: UITableViewController, UISearchBarDelegate, UITableV
     }
     
     // MARK: Search Bar
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        filteredReviews = reviews.filter({( review: TPReview) -> Bool in
+    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchActive = true;
+    }
+    
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchActive = false;
+    }
+
+    func filterContentForSearchText(searchText: String) {
+        // Filter the array using the filter method
+        self.filteredReviews = reviews.filter({( review: TPReview) -> Bool in
             let reviewStringMatch = review.text.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
             let nameStringMatch = review.source.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
             return reviewStringMatch != nil || nameStringMatch != nil
         })
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        self.filterContentForSearchText(searchText)
         
         if(filteredReviews.count == 0){
             searchActive = false;
@@ -91,7 +113,6 @@ class ReviewViewController: UITableViewController, UISearchBarDelegate, UITableV
             searchActive = true;
         }
         // reload table cell in main thread
-        
         self.tableView.reloadData()
         
     }
@@ -139,7 +160,9 @@ class ReviewViewController: UITableViewController, UISearchBarDelegate, UITableV
                 dispatch_async(dispatch_get_main_queue()) {
                     cell.placeName.text = self.reviewDetailData?.name
                 }
-
+                
+                // add all the data to array
+                self.reviews[indexPath.row].placeName = self.reviewDetailData?.name
             } else {
                 println(error)
             }
@@ -159,17 +182,27 @@ class ReviewViewController: UITableViewController, UISearchBarDelegate, UITableV
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         // Get the selected categories
-        // let selectedCategories = reviews[indexPath.row]
+        // declare reviws data
+        let reviewDetailCell:TPReview!
+        
+        if(searchActive){
+            reviewDetailCell = filteredReviews[indexPath.row]
+        } else {
+            reviewDetailCell = reviews[indexPath.row]
+        }
         
         // Get a reviewController from the Storyboard
         let reviewDetailController = self.storyboard!.instantiateViewControllerWithIdentifier("ReviewDetailViewController") as! ReviewDetailViewController
+        
+        // pass the data to next view
+        reviewDetailController.reviewDetail = reviewDetailCell
         
         // Push the new controller onto the stack
         self.navigationController!.pushViewController(reviewDetailController, animated: true)
     }
     
     func timeFilterList() {
-
+        
         // toggle the sort function
         if isSorted == false {
             // should probably be called sort and not filter
@@ -182,17 +215,19 @@ class ReviewViewController: UITableViewController, UISearchBarDelegate, UITableV
         }
         self.tableView.reloadData(); // notify the table view the data has changed
     }
-    
-    // Helpers
-    func getSourceIcon(source:String) -> UIImage {
-        if source == "Foursquare" {
-            return UIImage(named: "foursquare")!
-        } else if source == "Facebook" {
-            return UIImage(named: "facebook")!
-        } else if source == "Booking" {
-            return UIImage(named: "booking")!
-        } else {
-            return UIImage(named: "google")!
-        }
+
+}
+
+// Helpers
+public func getSourceIcon(source:String) -> UIImage {
+    if source == "Foursquare" {
+        return UIImage(named: "foursquare")!
+    } else if source == "Facebook" {
+        return UIImage(named: "facebook")!
+    } else if source == "Booking" {
+        return UIImage(named: "booking")!
+    } else {
+        return UIImage(named: "google")!
     }
 }
+

@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-class ReviewDetailViewController: UIViewController, UIScrollViewDelegate{
+class ReviewDetailViewController: UIViewController, UIScrollViewDelegate {
+    
+    var reviewDetail: TPReview!
     
     @IBOutlet weak var placeImage: UIImageView!
     @IBOutlet weak var ratingLabel: UILabel!
@@ -18,31 +20,28 @@ class ReviewDetailViewController: UIViewController, UIScrollViewDelegate{
     @IBOutlet weak var sourceImage: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
     
-    @IBOutlet weak var scrollView: UIScrollView!
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        let randomImage = "Aerial0\(arc4random_uniform(8)).jpg"
-        placeImage.image = UIImage(named: randomImage)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        // display random images
+        let randomImage = "Aerial0\(arc4random_uniform(8)).jpg"
+        self.placeImage.image = UIImage(named: randomImage)
+
         // load place name and rating label
-        ratingLabel.text = "4.5/10"
-        
+        ratingLabel.text = "\(reviewDetail.rating)/10"
         placeName.numberOfLines = 0
-        placeName.text = "Van Dor Arabmeia Money is not"
-        
+        placeName.text = reviewDetail.placeName
         // show review text
         reviewText.numberOfLines = 0
-        reviewText.text = "Wow, ok, the problem is exactly this, if I go to the interface builder and select the view controller and try to connect the outlet available, the scroller don't appear"
-        sourceImage.image = UIImage(named: "facebook")
-        dateLabel.text = "13-10-2015" + " ⏎"
+        reviewText.text = reviewDetail.text
+        
+        println("\(self.reviewDetail.source)")
+        // Display review source
+        self.sourceImage.image = getSourceIcon(reviewDetail.source)
+        dateLabel.text = "\(reviewDetail.reviewTime)" + " ⏎"
         
     }
-   
     
 }
 

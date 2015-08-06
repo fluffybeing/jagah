@@ -11,34 +11,43 @@ import Foundation
 struct TPReview {
     
     var text:String = ""
-    var rating:Int = 0
-    var reviewTime:String
-    var source:String
-    var wordCount:Int
-    var detailURL:String
+    var rating:String = ""
+    var reviewTime:String = ""
+    var source:String = ""
+    var wordCount:Int = 0
+    var detailURL:String = ""
+    var placeName:String?
+    
     
     /* Construct a TPPlace from a dictionary */
     init(dictionary: [String : AnyObject]) {
         
-        // rating = dictionary[TPClient.JSONResponseKeys.ReviewRating] as! Int
         source = dictionary[TPClient.JSONResponseKeys.ReviewSource] as! String
         text = dictionary[TPClient.JSONResponseKeys.ReviewText] as! String
         reviewTime = dictionary[TPClient.JSONResponseKeys.ReviewTime] as! String
         wordCount = dictionary[TPClient.JSONResponseKeys.ReviewWordsCount] as! Int
         detailURL = dictionary[TPClient.JSONResponseKeys.ReviewDetails] as! String
         
+        if let ratingData = dictionary[TPClient.JSONResponseKeys.ReviewRating]?.stringValue {
+            
+            if rating.isEmpty == false {
+                rating = ratingData
+            } else {
+                rating = "0"
+            }
+        }
+        
     }
-    
+
     /* Helper: Given an array of dictionaries, convert them to an array of TPReview objects */
     static func reviewsFromResults(results: [[String : AnyObject]]) -> [TPReview] {
         var reviews = [TPReview]()
         
-        
         // limit the result to 20
-        for result in results {
+        for result in Array(results[0...30]) {
             reviews.append(TPReview(dictionary: result))
         }
-        return Array(reviews[0...20])
+        return reviews
     }
 }
 
