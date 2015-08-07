@@ -46,6 +46,7 @@
 		C015788C1B49205400031AA2 /* Aerial05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C01578851B49205400031AA2 /* Aerial05.jpg */; };
 		C015788D1B49205400031AA2 /* Aerial06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C01578861B49205400031AA2 /* Aerial06.jpg */; };
 		C015788E1B49205400031AA2 /* Aerial07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C01578871B49205400031AA2 /* Aerial07.jpg */; };
+		C0ABFB341B74E4AD00E9DBC4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0ABFB331B74E4AD00E9DBC4 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		C01578851B49205400031AA2 /* Aerial05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aerial05.jpg; sourceTree = "<group>"; };
 		C01578861B49205400031AA2 /* Aerial06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aerial06.jpg; sourceTree = "<group>"; };
 		C01578871B49205400031AA2 /* Aerial07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aerial07.jpg; sourceTree = "<group>"; };
+		C0ABFB331B74E4AD00E9DBC4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Tour Da Vida/Images.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		C004A88C1B368F52004BEC66 = {
 			isa = PBXGroup;
 			children = (
+				C0ABFB331B74E4AD00E9DBC4 /* Images.xcassets */,
 				C004A8971B368F52004BEC66 /* Tour Da Vida */,
 				C004A8AD1B368F52004BEC66 /* Tour Da VidaTests */,
 				C004A8961B368F52004BEC66 /* Products */,
@@ -319,6 +322,7 @@
 		C004A88D1B368F52004BEC66 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = Housing;
 				TargetAttributes = {
@@ -371,6 +375,7 @@
 				C004A8DC1B370033004BEC66 /* paris.jpg in Resources */,
 				C004A9331B37088B004BEC66 /* heart206.png in Resources */,
 				C004A9281B37088B004BEC66 /* coconut5.png in Resources */,
+				C0ABFB341B74E4AD00E9DBC4 /* Images.xcassets in Resources */,
 				C01578891B49205400031AA2 /* Aerial02.jpg in Resources */,
 				C004A8DD1B370033004BEC66 /* rome.jpg in Resources */,
 				C004A8D01B36DE99004BEC66 /* amsterdam.jpg in Resources */,
