@@ -36,7 +36,6 @@ class ReviewDetailViewController: UIViewController, UIScrollViewDelegate {
         reviewText.numberOfLines = 0
         reviewText.text = reviewDetail.text
         
-        println("\(self.reviewDetail.source)")
         // Display review source
         self.sourceImage.image = getSourceIcon(reviewDetail.source)
         dateLabel.text = "\(reviewDetail.reviewTime)" + " ⏎"
