@@ -38,7 +38,7 @@ class CategoryViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell = self.tableView.dequeueReusableCellWithIdentifier("CategoryViewCell") as! CategoryViewCell
+        var cell = self.tableView.dequeueReusableCellWithIdentifier("CategoryViewCell") as CategoryViewCell
         
         // get the entry object
         let entry = category.entry[indexPath.row]
@@ -60,7 +60,7 @@ class CategoryViewController: UITableViewController {
         let selectedCategory = category.entry[indexPath.row]
         
         // Get a reviewController from the Storyboard
-        let reviewController = self.storyboard!.instantiateViewControllerWithIdentifier("ReviewViewController") as! ReviewViewController
+        let reviewController = self.storyboard!.instantiateViewControllerWithIdentifier("ReviewViewController") as ReviewViewController
         
         // pass the date
         reviewController.location = self.location

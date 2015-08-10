@@ -18,10 +18,10 @@ struct TPPlace {
     /* Construct a TPPlace from a dictionary */
     init(dictionary: [String : AnyObject]) {
         
-        name = dictionary[TPClient.JSONResponseKeys.PlaceName] as! String
-        id = dictionary[TPClient.JSONResponseKeys.PlaceId] as! Int
-        address = dictionary[TPClient.JSONResponseKeys.PlaceAddress] as! String
-        details = dictionary[TPClient.JSONResponseKeys.PlaceDetails] as! String
+        name = dictionary[TPClient.JSONResponseKeys.PlaceName] as String!
+        id = dictionary[TPClient.JSONResponseKeys.PlaceId] as Int!
+        address = dictionary[TPClient.JSONResponseKeys.PlaceAddress] as String!
+        details = dictionary[TPClient.JSONResponseKeys.PlaceDetails] as String!
     
     }
     

@@ -38,7 +38,7 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PlaceViewCell", forIndexPath: indexPath) as! PlaceCollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PlaceViewCell", forIndexPath: indexPath) as PlaceCollectionViewCell
         // cell.backgroundColor = UIColor.redColor()
         
         let entry = placeData.entryPlaces[indexPath.row]
@@ -52,7 +52,7 @@ class PlaceViewController: UIViewController, UICollectionViewDelegate, UICollect
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
 
         // Get a categoryController from the Storyboard
-        let categoryController = self.storyboard!.instantiateViewControllerWithIdentifier("CategoryViewController") as! CategoryViewController
+        let categoryController = self.storyboard!.instantiateViewControllerWithIdentifier("CategoryViewController") as CategoryViewController
         
         // pass the data
         let entry = placeData.entryPlaces[indexPath.row]

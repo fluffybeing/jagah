@@ -22,11 +22,11 @@ struct TPReview {
     /* Construct a TPPlace from a dictionary */
     init(dictionary: [String : AnyObject]) {
         
-        source = dictionary[TPClient.JSONResponseKeys.ReviewSource] as! String
-        text = dictionary[TPClient.JSONResponseKeys.ReviewText] as! String
-        reviewTime = dictionary[TPClient.JSONResponseKeys.ReviewTime] as! String
-        wordCount = dictionary[TPClient.JSONResponseKeys.ReviewWordsCount] as! Int
-        detailURL = dictionary[TPClient.JSONResponseKeys.ReviewDetails] as! String
+        source = dictionary[TPClient.JSONResponseKeys.ReviewSource] as String!
+        text = dictionary[TPClient.JSONResponseKeys.ReviewText] as String!
+        reviewTime = dictionary[TPClient.JSONResponseKeys.ReviewTime] as String!
+        wordCount = dictionary[TPClient.JSONResponseKeys.ReviewWordsCount] as Int!
+        detailURL = dictionary[TPClient.JSONResponseKeys.ReviewDetails] as String!
         
         if let ratingData = dictionary[TPClient.JSONResponseKeys.ReviewRating]?.stringValue {
             
@@ -64,10 +64,10 @@ struct TPReviewDetail {
     init(dictionary: [String : AnyObject]) {
         
         // rating = dictionary[TPClient.JSONResponseKeys.ReviewRating] as! Int
-        category = dictionary[TPClient.JSONResponseKeys.PlaceCategory] as! String
-        location = dictionary[TPClient.JSONResponseKeys.PlaceLocation] as! String
-        name = dictionary[TPClient.JSONResponseKeys.PlaceName] as! String
-        id = dictionary[TPClient.JSONResponseKeys.PlaceId] as! Int
+        category = dictionary[TPClient.JSONResponseKeys.PlaceCategory] as String!
+        location = dictionary[TPClient.JSONResponseKeys.PlaceLocation] as String!
+        name = dictionary[TPClient.JSONResponseKeys.PlaceName] as String!
+        id = dictionary[TPClient.JSONResponseKeys.PlaceId] as Int!
     }
     
     /* Helper: Given an array of dictionaries, convert them to an array of TPReview objects */

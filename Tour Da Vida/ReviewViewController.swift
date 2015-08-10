@@ -134,10 +134,10 @@ class ReviewViewController: UITableViewController, UISearchBarDelegate, UITableV
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     
-        var cell = self.tableView.dequeueReusableCellWithIdentifier("ReviewViewCell") as! ReviewViewCell
+        var cell = self.tableView.dequeueReusableCellWithIdentifier("ReviewViewCell") as ReviewViewCell
         
         // declare reviws data
-        let review:TPReview!
+        var review:TPReview!
         
         if(searchActive){
             review = filteredReviews[indexPath.row]
@@ -159,7 +159,7 @@ class ReviewViewController: UITableViewController, UISearchBarDelegate, UITableV
             
             if let data = JSONResult as? [String:AnyObject] {
                 // println(data["place"])
-                self.reviewDetailData = TPReviewDetail.reviewDetailFromResults(data["place"]! as! [String : AnyObject])
+                self.reviewDetailData = TPReviewDetail.reviewDetailFromResults(data["place"] as [String : AnyObject]!)
                 // reload table cell in main thread
                 dispatch_async(dispatch_get_main_queue()) {
                     cell.placeName.text = self.reviewDetailData?.name
@@ -187,7 +187,7 @@ class ReviewViewController: UITableViewController, UISearchBarDelegate, UITableV
         
         // Get the selected categories
         // declare reviws data
-        let reviewDetailCell:TPReview!
+        var reviewDetailCell:TPReview!
         
         if(searchActive){
             reviewDetailCell = filteredReviews[indexPath.row]
@@ -196,7 +196,7 @@ class ReviewViewController: UITableViewController, UISearchBarDelegate, UITableV
         }
         
         // Get a reviewController from the Storyboard
-        let reviewDetailController = self.storyboard!.instantiateViewControllerWithIdentifier("ReviewDetailViewController") as! ReviewDetailViewController
+        let reviewDetailController = self.storyboard!.instantiateViewControllerWithIdentifier("ReviewDetailViewController") as ReviewDetailViewController
         
         // pass the data to next view
         reviewDetailController.reviewDetail = reviewDetailCell
