@@ -137,7 +137,7 @@ class ReviewViewController: UITableViewController, UISearchBarDelegate, UITableV
         var review:TPReview!
         
         if(searchActive){
-            review = filteredReviews[indexPath.row]
+            review = self.filteredReviews[indexPath.row]
         } else {
             review = reviews[indexPath.row]
         }
@@ -186,11 +186,9 @@ class ReviewViewController: UITableViewController, UISearchBarDelegate, UITableV
         // declare reviws data
         var reviewDetailCell:TPReview!
         
-        if(searchActive){
-            reviewDetailCell = filteredReviews[indexPath.row]
-        } else {
-            reviewDetailCell = reviews[indexPath.row]
-        }
+      
+        reviewDetailCell = reviews[indexPath.row]
+        
         
         // Get a reviewController from the Storyboard
         let reviewDetailController = self.storyboard!.instantiateViewControllerWithIdentifier("ReviewDetailViewController") as ReviewDetailViewController
